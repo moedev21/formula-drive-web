@@ -107,12 +107,14 @@ export function Hero() {
             ))}
           </div>
 
-          {/* Desktop only: a portrait clip of the Ferrari F8 Spider beside the fleet photographs. */}
+          {/* Desktop only: the current car's own portrait clip beside its photograph. Keyed by car,
+              so it swaps to the next clip as the banner moves on. */}
           <LoopVideo
-            src="/video/ferrari-f8-headlight"
+            key={current.car.slug}
+            src={current.video}
             size={1280}
             sizes="25vw"
-            label="Close-up of the Formula Drive Ferrari F8 Spider's headlight and bonnet"
+            label={current.videoLabel}
             className="hero-media hidden lg:order-3 lg:col-span-3 lg:block"
           />
 

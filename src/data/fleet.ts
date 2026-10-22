@@ -55,13 +55,14 @@ export function formatAED(n: number) {
   return `AED ${aed.format(n)}`;
 }
 
-// Cars pinned under the hero headline, in order, with the photo used for each.
+// Cars shown in the home page banner, in order: each with its photo and its own video clip
+// (the client's footage in public/video, desktop only).
 export const heroSeries = [
-  { slug: "lamborghini-evo-spider", image: 0 },
-  { slug: "ferrari-f8-spider", image: 2 },
-  { slug: "rent-lamborghini-urus", image: 1 },
-  { slug: "mercedes-benz-g63", image: 1 },
-].map(({ slug, image }) => {
+  { slug: "lamborghini-evo-spider", image: 0, video: "/video/lamborghini-evo-spider", detail: "rear diffuser and exhaust" },
+  { slug: "ferrari-f8-spider", image: 2, video: "/video/ferrari-f8-headlight", detail: "headlight and bonnet" },
+  { slug: "bmw-4-series-convertible", image: 0, video: "/video/bmw-4-series-convertible", detail: "badge, grille and the Dubai Marina skyline" },
+  { slug: "porsche-718-boxster-convertible", image: 0, video: "/video/porsche-718-boxster", detail: "cockpit and steering wheel" },
+].map(({ slug, image, video, detail }) => {
   const car = carBySlug(slug)!;
-  return { car, img: car.images[image] };
+  return { car, img: car.images[image], video, videoLabel: `Close-up of the Formula Drive ${car.name}: ${detail}` };
 });
