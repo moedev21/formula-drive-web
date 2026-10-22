@@ -1,4 +1,5 @@
 import { Logo } from "./Logo";
+import { Dirham } from "./Dirham";
 import { business, locations, nav } from "@/data/site";
 
 // Section 11 — charcoal close: logo, anchors, both locations, contact, social, legal.
@@ -77,7 +78,7 @@ export function Footer() {
           ))}
         </ul>
         <p className="flex flex-wrap items-center gap-x-6">
-          <span>© {year} Formula Drive Rent a Car. Prices in AED per day, excluding 5% VAT.</span>
+          <span>© {year} Formula Drive Rent a Car. Prices in <Dirham className="mr-0" /> per day, excluding 5% VAT.</span>
           <span>
             Managed by{" "}
             <a href="https://devstacklab.com/" target="_blank" rel="noopener" className="link text-white">

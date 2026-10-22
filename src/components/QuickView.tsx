@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
-import { categoryLabel, formatAED, generalConditions, type Car } from "@/data/fleet";
+import { categoryLabel, formatAmount, generalConditions, type Car } from "@/data/fleet";
+import { Dirham, withDirham } from "./Dirham";
 import { carEnquiry } from "@/lib/whatsapp";
 import { ArrowLeft, ArrowRight, CloseIcon, WhatsAppIcon } from "./icons";
 
@@ -175,7 +176,11 @@ export function QuickView({ car, onClose }: { car: Car | null; onClose: () => vo
               <p className="num t-h3 font-normal">
                 {c.pricePerDayAED ? (
                   <>
-                    <span className="font-semibold">{formatAED(c.pricePerDayAED)}</span> per day{" "}
+                    <span className="font-semibold">
+                      <Dirham />
+                      {formatAmount(c.pricePerDayAED)}
+                    </span>{" "}
+                    per day{" "}
                     <span className="t-small text-muted">{c.vatLabel}</span>
                   </>
                 ) : (
@@ -209,7 +214,7 @@ export function QuickView({ car, onClose }: { car: Car | null; onClose: () => vo
               <h3 className="t-h3">Rental conditions</h3>
               <ul className="mt-4 flex list-disc flex-col gap-2 pl-5">
                 {[...c.conditions, ...generalConditions].map((t) => (
-                  <li key={t}>{t}</li>
+                  <li key={t}>{withDirham(t)}</li>
                 ))}
               </ul>
             </div>

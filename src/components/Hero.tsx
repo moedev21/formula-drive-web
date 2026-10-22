@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { heroSeries, formatAED } from "@/data/fleet";
+import { heroSeries, formatAmount } from "@/data/fleet";
+import { Dirham } from "./Dirham";
 import { generalEnquiry } from "@/lib/whatsapp";
 import { ArrowRight, WhatsAppIcon } from "./icons";
 import { LoopVideo } from "./LoopVideo";
@@ -85,7 +86,8 @@ export function Hero() {
 
         <p className="hero-fade t-body mt-4 max-w-[40ch] lg:mt-6 lg:max-w-[52ch]" style={{ ["--i" as string]: 0 }}>
           Supercar, sports car and SUV rental in Dubai Marina, booked direct with the owner. Ferrari, Lamborghini, Porsche
-          and more, from AED 170 a day.
+          and more, from <Dirham />
+          170 a day.
         </p>
 
         <div className="mt-5 flex min-h-0 flex-1 flex-col gap-x-6 gap-y-5 lg:mt-8 lg:grid lg:grid-cols-12">
@@ -146,7 +148,8 @@ export function Hero() {
               <span className="t-h3">{current.car.name}</span>
               {current.car.pricePerDayAED && (
                 <span className="t-small num text-muted">
-                  {formatAED(current.car.pricePerDayAED)} / day, {current.car.vatLabel}
+                  <Dirham />
+                  {formatAmount(current.car.pricePerDayAED)} / day, {current.car.vatLabel}
                 </span>
               )}
             </p>

@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { cars, categories, formatAED, type Car, type CategoryId } from "@/data/fleet";
+import { cars, categories, formatAmount, type Car, type CategoryId } from "@/data/fleet";
+import { Dirham } from "./Dirham";
 import { carEnquiry } from "@/lib/whatsapp";
 import { QuickView } from "./QuickView";
 import { ArrowRight, WhatsAppIcon } from "./icons";
@@ -142,7 +143,11 @@ export function Fleet() {
                   <p className="num mt-2">
                     {car.pricePerDayAED ? (
                       <>
-                        <span className="font-semibold">{formatAED(car.pricePerDayAED)}</span> / day{" "}
+                        <span className="font-semibold">
+                          <Dirham />
+                          {formatAmount(car.pricePerDayAED)}
+                        </span>{" "}
+                        / day{" "}
                         <span className="t-small text-muted">{car.vatLabel}</span>
                       </>
                     ) : (

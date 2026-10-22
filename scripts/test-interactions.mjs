@@ -60,7 +60,7 @@ const errors = [];
 
   await check("sorting by price works both ways", async () => {
     const prices = async () =>
-      (await page.locator("#fleet ul > li p.num").allInnerTexts()).map((t) => Number(t.match(/AED ([\d,]+)/)[1].replace(/,/g, "")));
+      (await page.locator("#fleet ul > li p.num").allInnerTexts()).map((t) => Number(t.match(/([\d,]+)\s*\/ day/)[1].replace(/,/g, "")));
     await page.locator("#fleet select").selectOption("price-asc");
     await page.waitForTimeout(450);
     const asc = await prices();

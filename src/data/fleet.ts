@@ -51,8 +51,14 @@ export function categoryLabel(car: Car) {
 }
 
 const aed = new Intl.NumberFormat("en-AE", { maximumFractionDigits: 0 });
+// Text form, for metadata and structured data (which cannot show the Dirham symbol).
 export function formatAED(n: number) {
-  return `AED ${aed.format(n)}`;
+  return `AED ${formatAmount(n)}`;
+}
+
+// The number alone, shown on the page after the <Dirham /> symbol.
+export function formatAmount(n: number) {
+  return aed.format(n);
 }
 
 // Cars shown in the home page banner, in order: each with its photo and its own video clip

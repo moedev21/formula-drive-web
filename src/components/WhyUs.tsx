@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { reasons } from "@/data/site";
+import { withDirham } from "./Dirham";
 
 // Section 08 — four reasons as tall photo cards. They rise in one after another as the section
 // enters (shared reveal), and on devices with a mouse the card under the cursor tilts toward it on
@@ -97,7 +98,7 @@ export function WhyUs() {
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-6 [transform:translateZ(28px)] lg:p-7">
                   <h3 className="t-h3 font-bold uppercase [font-variation-settings:'wdth'_112]">{r.title}</h3>
-                  <p className="leading-[1.45]">{r.text}</p>
+                  <p className="leading-[1.45]">{withDirham(r.text)}</p>
                 </div>
                 <span
                   aria-hidden="true"

@@ -255,7 +255,7 @@ its final state, crossfades become instant swaps. No animation library: CSS + sm
   `src/data/`, with a `source` and `status` (`verified` / `to-confirm` / `conflict`).
 - Nothing `to-confirm` or `conflict` is shown as fact on the page: prices fall back to
   "Price on request", specs are omitted, and the inventory report lists them.
-- Prices: "AED 2,500 / day" + VAT label. The VAT label is decided once the live site
+- Prices: Dirham symbol + amount, "/ day" + VAT label. The symbol is the client's official SVG (`src/components/Dirham.tsx`), announced as "AED" to screen readers; metadata and JSON-LD keep the text "AED". The VAT label is decided once the live site
   confirms whether prices include 5% VAT; until then the label reads "excl. VAT, to confirm"
   in the dataset and the page shows "Price on request".
 - No invented reviews, ratings, customer counts or awards.
