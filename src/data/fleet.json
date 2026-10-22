@@ -1,0 +1,1588 @@
+{
+  "capturedAt": "2026-10-22T01:30:48Z",
+  "source": "https://formuladriverentacar.com/",
+  "generalConditions": [
+    "Minimum rental period of 24 hours; daily, weekly, monthly and longer rentals available.",
+    "Standard mileage limit and insurance are included in all prices.",
+    "Security deposit between AED 1,000 and AED 10,000 depending on the car, ideally by credit card. A zero-deposit option is available.",
+    "Drivers must be 21 or older with a valid driving licence and ID.",
+    "UAE residents: UAE driving licence and Emirates ID. Visitors: passport, visit visa, home-country licence and International Driving Permit."
+  ],
+  "cars": [
+    {
+      "id": 23614,
+      "slug": "ferrari-f8-spider",
+      "name": "Ferrari F8 Spider",
+      "liveTitle": "Ferrari F8 Spider",
+      "brand": "Ferrari",
+      "model": "F8 Spider",
+      "categories": [
+        "supercars",
+        "convertibles"
+      ],
+      "pricePerDayAED": 3000,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "2-door convertible supercar"
+        },
+        {
+          "label": "Engine",
+          "value": "3.9L Twin-Turbocharged V8"
+        },
+        {
+          "label": "Power Output",
+          "value": "~710–720 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~770 Nm"
+        },
+        {
+          "label": "Transmission",
+          "value": "7-speed dual-clutch automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "Rear-Wheel Drive (RWD)"
+        },
+        {
+          "label": "Top Speed",
+          "value": "~340 km/h"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "2 passengers"
+        },
+        {
+          "label": "Boot Space",
+          "value": "~200L"
+        },
+        {
+          "label": "Length",
+          "value": "~4611 mm"
+        },
+        {
+          "label": "Height",
+          "value": "~1206 mm"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Ferrari F8 Spider is a breathtaking convertible supercar that combines extreme performance with Italian design excellence. As the open-top version of the F8 Tributo, it delivers track-level power with the thrill of open-air driving.",
+      "images": [
+        {
+          "src": "/fleet/ferrari-f8-spider/01.jpg",
+          "width": 1261,
+          "height": 673,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_4510-2.jpg"
+        },
+        {
+          "src": "/fleet/ferrari-f8-spider/02.jpg",
+          "width": 1626,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_4487.jpg"
+        },
+        {
+          "src": "/fleet/ferrari-f8-spider/03.webp",
+          "width": 1280,
+          "height": 956,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_4508.webp"
+        },
+        {
+          "src": "/fleet/ferrari-f8-spider/04.webp",
+          "width": 1200,
+          "height": 1328,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_4486.webp"
+        },
+        {
+          "src": "/fleet/ferrari-f8-spider/05.webp",
+          "width": 1200,
+          "height": 1311,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_4504.webp"
+        },
+        {
+          "src": "/fleet/ferrari-f8-spider/06.webp",
+          "width": 1200,
+          "height": 1600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_4505.webp"
+        },
+        {
+          "src": "/fleet/ferrari-f8-spider/07.webp",
+          "width": 1200,
+          "height": 1600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_4509.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/ferrari-f8-spider/",
+      "liveModified": "2026-10-21T18:37:05"
+    },
+    {
+      "id": 23623,
+      "slug": "lamborghini-evo-spider",
+      "name": "Lamborghini Huracán EVO Spyder",
+      "liveTitle": "Lamborghini EVO SPIDER",
+      "brand": "Lamborghini",
+      "model": "Huracán EVO Spyder",
+      "categories": [
+        "supercars",
+        "convertibles"
+      ],
+      "pricePerDayAED": 3000,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "2-door convertible supercar"
+        },
+        {
+          "label": "Engine",
+          "value": "5.2L Naturally Aspirated V10"
+        },
+        {
+          "label": "Power Output",
+          "value": "~631 HP"
+        },
+        {
+          "label": "Transmission",
+          "value": "7-speed dual-clutch automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "AWD (or RWD variant available)"
+        },
+        {
+          "label": "Top Speed",
+          "value": "~325 km/h (200+ mph)"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Lamborghini Huracán EVO Spyder is a high-performance convertible supercar that delivers breathtaking speed, aggressive styling, and an unmatched open-air driving experience. Designed as the open-top version of the Huracán EVO, it combines Lamborghini’s iconic V10 engine with cutting-edge aerodynamics and advanced driving technology.",
+      "images": [
+        {
+          "src": "/fleet/lamborghini-evo-spider/01.webp",
+          "width": 1915,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_7324-scaled.webp"
+        },
+        {
+          "src": "/fleet/lamborghini-evo-spider/02.jpg",
+          "width": 1200,
+          "height": 600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_7238-scaled-2.jpg"
+        },
+        {
+          "src": "/fleet/lamborghini-evo-spider/03.webp",
+          "width": 1200,
+          "height": 1282,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_7233-scaled.webp"
+        },
+        {
+          "src": "/fleet/lamborghini-evo-spider/04.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_7283-scaled.webp"
+        },
+        {
+          "src": "/fleet/lamborghini-evo-spider/05.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_7292-scaled.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/lamborghini-evo-spider/",
+      "liveModified": "2026-10-21T18:38:34"
+    },
+    {
+      "id": 23192,
+      "slug": "rent-lamborghini-urus",
+      "name": "Lamborghini Urus",
+      "liveTitle": "Lamborghini Urus",
+      "brand": "Lamborghini",
+      "model": "Urus",
+      "categories": [
+        "supercars",
+        "suvs"
+      ],
+      "pricePerDayAED": 2500,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Lamborghini Urus stands as a testament to the fusion of power, style, and versatility. As the world’s first Super Sport Utility Vehicle, it combines the raw performance of a Lamborghini with the practicality of an SUV, offering an unparalleled driving experience that is both exhilarating and luxurious.",
+      "images": [
+        {
+          "src": "/fleet/rent-lamborghini-urus/01.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/03/WhatsApp-Image-2026-06-12-at-2.07.11-AM.jpeg"
+        },
+        {
+          "src": "/fleet/rent-lamborghini-urus/02.jpg",
+          "width": 1600,
+          "height": 1426,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/03/46336666.jpeg"
+        },
+        {
+          "src": "/fleet/rent-lamborghini-urus/03.jpg",
+          "width": 1600,
+          "height": 1554,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/03/WhatsApp-Image-2026-06-12-at-2.07.12-AM.jpeg"
+        },
+        {
+          "src": "/fleet/rent-lamborghini-urus/04.jpg",
+          "width": 1200,
+          "height": 1600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/03/356363567.jpeg"
+        },
+        {
+          "src": "/fleet/rent-lamborghini-urus/05.jpg",
+          "width": 1125,
+          "height": 814,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/03/645345322.jpeg"
+        },
+        {
+          "src": "/fleet/rent-lamborghini-urus/06.jpg",
+          "width": 1125,
+          "height": 851,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/03/000998.jpeg"
+        },
+        {
+          "src": "/fleet/rent-lamborghini-urus/07.jpg",
+          "width": 1125,
+          "height": 844,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/03/0098887.jpeg"
+        },
+        {
+          "src": "/fleet/rent-lamborghini-urus/08.jpg",
+          "width": 1125,
+          "height": 807,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/03/6656889.jpeg"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/rent-lamborghini-urus/",
+      "liveModified": "2026-10-21T19:42:00"
+    },
+    {
+      "id": 23836,
+      "slug": "porsche-911-gts-spider",
+      "name": "Porsche 911 GTS Cabriolet",
+      "liveTitle": "Porsche 911 GTS Spider",
+      "brand": "Porsche",
+      "model": "911 GTS Cabriolet",
+      "categories": [
+        "sports",
+        "convertibles"
+      ],
+      "pricePerDayAED": 1600,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "2-door convertible sports car (Cabriolet)"
+        },
+        {
+          "label": "Engine",
+          "value": "3.6L Turbocharged Flat-6 (T-Hybrid system)"
+        },
+        {
+          "label": "Power Output",
+          "value": "~541 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~610 Nm"
+        },
+        {
+          "label": "Transmission",
+          "value": "8-speed PDK dual-clutch automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "RWD / Optional AWD (Carrera 4 GTS)"
+        },
+        {
+          "label": "Top Speed",
+          "value": "~312 km/h"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "4 passengers (2+2 layout)"
+        },
+        {
+          "label": "Length",
+          "value": "~4553 mm"
+        },
+        {
+          "label": "Width",
+          "value": "~1852 mm"
+        },
+        {
+          "label": "Height",
+          "value": "~1293 mm"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Porsche 911 GTS Cabriolet is a high-performance luxury convertible that combines iconic design with cutting-edge engineering. As part of the legendary 911 lineup, the GTS Cabriolet delivers an unmatched balance of speed, precision handling, and everyday usability—now enhanced with modern hybrid-assisted performance.",
+      "images": [
+        {
+          "src": "/fleet/porsche-911-gts-spider/01.webp",
+          "width": 1933,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4894-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-911-gts-spider/02.webp",
+          "width": 1593,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4889-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-911-gts-spider/03.webp",
+          "width": 1626,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4966-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-911-gts-spider/04.webp",
+          "width": 1464,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4960-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-911-gts-spider/05.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4897-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-911-gts-spider/06.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4900-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-911-gts-spider/07.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4910-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-911-gts-spider/08.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4911-scaled.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/porsche-911-gts-spider/",
+      "liveModified": "2026-10-21T18:39:52"
+    },
+    {
+      "id": 23762,
+      "slug": "mercedes-benz-g63",
+      "name": "Mercedes-Benz G63 AMG",
+      "liveTitle": "Mercedes Benz G63",
+      "brand": "Mercedes-Benz",
+      "model": "G63 AMG",
+      "categories": [
+        "suvs"
+      ],
+      "pricePerDayAED": 1000,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "Luxury performance SUV"
+        },
+        {
+          "label": "Engine",
+          "value": "4.0L Twin-Turbocharged V8 (AMG)"
+        },
+        {
+          "label": "Power Output",
+          "value": "~577 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~850 Nm"
+        },
+        {
+          "label": "Transmission",
+          "value": "9-speed automatic (AMG SPEEDSHIFT)"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "4MATIC All-Wheel Drive (AWD)"
+        },
+        {
+          "label": "Top Speed",
+          "value": "~220–240 km/h (electronically limited)"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "5 passengers"
+        },
+        {
+          "label": "Boot Space",
+          "value": "~667L"
+        },
+        {
+          "label": "Length",
+          "value": "~4873 mm"
+        },
+        {
+          "label": "Height",
+          "value": "~1966 mm"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Mercedes-Benz G63 AMG is a legendary luxury SUV that combines iconic design with extreme performance. Known for its bold, boxy shape and commanding road presence, the G63 delivers unmatched off-road capability alongside high-end comfort and cutting-edge technology.",
+      "images": [
+        {
+          "src": "/fleet/mercedes-benz-g63/01.jpg",
+          "width": 1280,
+          "height": 853,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_2713-2.jpg"
+        },
+        {
+          "src": "/fleet/mercedes-benz-g63/02.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_2688.webp"
+        },
+        {
+          "src": "/fleet/mercedes-benz-g63/03.webp",
+          "width": 1200,
+          "height": 1600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_2705.webp"
+        },
+        {
+          "src": "/fleet/mercedes-benz-g63/04.webp",
+          "width": 1200,
+          "height": 1600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_2711.webp"
+        },
+        {
+          "src": "/fleet/mercedes-benz-g63/05.webp",
+          "width": 1200,
+          "height": 1600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_2714.webp"
+        },
+        {
+          "src": "/fleet/mercedes-benz-g63/06.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_2694.webp"
+        },
+        {
+          "src": "/fleet/mercedes-benz-g63/07.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_2732.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/mercedes-benz-g63/",
+      "liveModified": "2026-06-10T23:00:33"
+    },
+    {
+      "id": 23857,
+      "slug": "porsche-cayenne-coupe",
+      "name": "Porsche Cayenne Coupe",
+      "liveTitle": "Porsche Cayenne Coupe",
+      "brand": "Porsche",
+      "model": "Cayenne Coupe",
+      "categories": [
+        "suvs",
+        "sports"
+      ],
+      "pricePerDayAED": 900,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "Luxury coupe-style SUV"
+        },
+        {
+          "label": "Engine (Base)",
+          "value": "3.0L Turbocharged V6"
+        },
+        {
+          "label": "Power Output",
+          "value": "~348 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~368 lb-ft"
+        },
+        {
+          "label": "Transmission",
+          "value": "8-speed automatic (Tiptronic S)"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "All-Wheel Drive (AWD)"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "~19 MPG combined"
+        },
+        {
+          "label": "Max Towing Capacity",
+          "value": "~7,700 lbs"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "4 passengers"
+        },
+        {
+          "label": "Cargo Space",
+          "value": "~20.9 cu.ft. (up to ~53 cu.ft.)"
+        },
+        {
+          "label": "Length",
+          "value": "~194 inches"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "~114 inches"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Porsche Cayenne Coupe blends the practicality of an SUV with the styling and performance of a sports car. With its sloping coupe-style roofline, powerful engine options, and refined interior, it delivers a unique combination of luxury, performance, and everyday usability.",
+      "images": [
+        {
+          "src": "/fleet/porsche-cayenne-coupe/01.webp",
+          "width": 1510,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9152-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-cayenne-coupe/02.webp",
+          "width": 1559,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9199-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-cayenne-coupe/03.webp",
+          "width": 1200,
+          "height": 1262,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9195-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-cayenne-coupe/04.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9173-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-cayenne-coupe/05.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9242-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-cayenne-coupe/06.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9250-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-cayenne-coupe/07.webp",
+          "width": 1231,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9260-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-cayenne-coupe/08.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9285-scaled.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/porsche-cayenne-coupe/",
+      "liveModified": "2026-10-21T20:15:59"
+    },
+    {
+      "id": 23794,
+      "slug": "jeep-wrangler-rubicon-392-hemi-v8-6-4l",
+      "name": "Jeep Wrangler Rubicon 392",
+      "liveTitle": "Jeep Wrangler Rubicon 392 Hemi V8 6.4L",
+      "brand": "Jeep",
+      "model": "Wrangler Rubicon 392 HEMI V8 6.4L",
+      "categories": [
+        "suvs"
+      ],
+      "pricePerDayAED": 800,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "4-door off-road SUV"
+        },
+        {
+          "label": "Engine",
+          "value": "6.4L HEMI Naturally Aspirated V8"
+        },
+        {
+          "label": "Power Output",
+          "value": "~470 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~470 lb-ft"
+        },
+        {
+          "label": "Transmission",
+          "value": "8-speed automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "Full-time 4×4 (4WD)"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "~14–20 MPG combined"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "5 passengers"
+        },
+        {
+          "label": "Cargo Space",
+          "value": "~27.7 cu.ft."
+        },
+        {
+          "label": "Fuel Tank",
+          "value": "~21.5 gallons"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Jeep Wrangler Rubicon 392 is the most powerful and capable Wrangler ever built, combining legendary off-road performance with the raw power of a 6.4L HEMI V8 engine. Designed for enthusiasts who want both extreme capability and muscle-car performance, the Rubicon 392 delivers an unmatched driving experience on and off the road.",
+      "images": [
+        {
+          "src": "/fleet/jeep-wrangler-rubicon-392-hemi-v8-6-4l/01.webp",
+          "width": 1440,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_8575.webp"
+        },
+        {
+          "src": "/fleet/jeep-wrangler-rubicon-392-hemi-v8-6-4l/02.jpg",
+          "width": 1200,
+          "height": 1452,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_8570.jpeg"
+        },
+        {
+          "src": "/fleet/jeep-wrangler-rubicon-392-hemi-v8-6-4l/03.webp",
+          "width": 1200,
+          "height": 1600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_8597.webp"
+        },
+        {
+          "src": "/fleet/jeep-wrangler-rubicon-392-hemi-v8-6-4l/04.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_8609.webp"
+        },
+        {
+          "src": "/fleet/jeep-wrangler-rubicon-392-hemi-v8-6-4l/05.webp",
+          "width": 1200,
+          "height": 1600,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_8601.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/jeep-wrangler-rubicon-392-hemi-v8-6-4l/",
+      "liveModified": "2026-06-11T22:31:11"
+    },
+    {
+      "id": 23815,
+      "slug": "porsche-718-boxster-convertible",
+      "name": "Porsche 718 Boxster",
+      "liveTitle": "Porsche 718 Boxster Convertible",
+      "brand": "Porsche",
+      "model": "718 Boxster Convertible",
+      "categories": [
+        "sports",
+        "convertibles"
+      ],
+      "pricePerDayAED": 700,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "2-door convertible sports car"
+        },
+        {
+          "label": "Transmission",
+          "value": "6-speed manual / 7-speed PDK automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "Rear-Wheel Drive (RWD)"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "~19–24 MPG combined"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "2 passengers"
+        },
+        {
+          "label": "Cargo Space",
+          "value": "~9.6 cu.ft."
+        },
+        {
+          "label": "Length",
+          "value": "~172.9 inches"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "~97.4 inches"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Porsche 718 Boxster Convertible is a world-class mid-engine sports car that delivers exceptional handling, performance, and open-air driving pleasure. Known for its precise steering and perfectly balanced chassis, the Boxster offers a true driver-focused experience with Porsche’s signature engineering excellence.",
+      "images": [
+        {
+          "src": "/fleet/porsche-718-boxster-convertible/01.jpg",
+          "width": 1200,
+          "height": 907,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/thumbnail_IMG_4322-1.jpg"
+        },
+        {
+          "src": "/fleet/porsche-718-boxster-convertible/02.webp",
+          "width": 2216,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/WhatsApp-Image-2025-04-30-at-2.09.12-PM-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-718-boxster-convertible/03.webp",
+          "width": 2186,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/WhatsApp-Image-2025-04-30-at-2.09.13-PM-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-718-boxster-convertible/04.webp",
+          "width": 1837,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/WhatsApp-Image-2025-04-30-at-2.09.15-PM-1-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-718-boxster-convertible/05.webp",
+          "width": 1200,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/WhatsApp-Image-2025-04-30-at-2.09.14-PM-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-718-boxster-convertible/06.webp",
+          "width": 1200,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/WhatsApp-Image-2025-04-30-at-2.09.13-PM-1-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-718-boxster-convertible/07.webp",
+          "width": 1200,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/WhatsApp-Image-2025-04-30-at-2.09.16-PM-scaled.webp"
+        },
+        {
+          "src": "/fleet/porsche-718-boxster-convertible/08.webp",
+          "width": 1200,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/WhatsApp-Image-2025-04-30-at-2.09.18-PM-scaled.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/porsche-718-boxster-convertible/",
+      "liveModified": "2026-10-21T18:40:20"
+    },
+    {
+      "id": 23772,
+      "slug": "gmc-yukon-elevation",
+      "name": "GMC Yukon Elevation",
+      "liveTitle": "GMC Yukon Elevation",
+      "brand": "GMC",
+      "model": "Yukon Elevation",
+      "categories": [
+        "suvs"
+      ],
+      "pricePerDayAED": 600,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "Full-size 3-row SUV"
+        },
+        {
+          "label": "Engine",
+          "value": "5.3L V8 (standard)"
+        },
+        {
+          "label": "Power Output",
+          "value": "~355 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~383 lb-ft"
+        },
+        {
+          "label": "Transmission",
+          "value": "10-speed automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "RWD / Optional 4WD"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "~17 MPG combined"
+        },
+        {
+          "label": "Max Towing Capacity",
+          "value": "Up to ~8,400 lbs"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "Up to 8 passengers"
+        },
+        {
+          "label": "Cargo Space",
+          "value": "~25.5 cu.ft. (expandable to ~122.8 cu.ft.)"
+        },
+        {
+          "label": "Length",
+          "value": "~210.1 inches"
+        },
+        {
+          "label": "Fuel Tank Capacity",
+          "value": "~24 gallons"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The GMC Yukon Elevation is a bold full-size SUV designed for drivers who need space, power, and modern technology. With its aggressive styling, blacked-out design elements, and commanding road presence, the Elevation trim stands out as a sporty yet practical choice in the luxury SUV segment.",
+      "images": [
+        {
+          "src": "/fleet/gmc-yukon-elevation/01.jpg",
+          "width": 1261,
+          "height": 1087,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/11.jpeg"
+        },
+        {
+          "src": "/fleet/gmc-yukon-elevation/02.jpg",
+          "width": 1399,
+          "height": 1088,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/23324.jpeg"
+        },
+        {
+          "src": "/fleet/gmc-yukon-elevation/03.jpg",
+          "width": 1218,
+          "height": 1084,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/4565.jpeg"
+        },
+        {
+          "src": "/fleet/gmc-yukon-elevation/04.jpg",
+          "width": 1336,
+          "height": 1162,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/21.jpeg"
+        },
+        {
+          "src": "/fleet/gmc-yukon-elevation/05.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/3453455.jpeg"
+        },
+        {
+          "src": "/fleet/gmc-yukon-elevation/06.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/455322.jpeg"
+        },
+        {
+          "src": "/fleet/gmc-yukon-elevation/07.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/654564.jpeg"
+        },
+        {
+          "src": "/fleet/gmc-yukon-elevation/08.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/99887.jpeg"
+        },
+        {
+          "src": "/fleet/gmc-yukon-elevation/09.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/34344.jpeg"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/gmc-yukon-elevation/",
+      "liveModified": "2026-06-11T22:11:44"
+    },
+    {
+      "id": 23612,
+      "slug": "bmw-4-series-convertible",
+      "name": "BMW 4 Series Convertible",
+      "liveTitle": "Bmw 4 Series Convertible",
+      "brand": "BMW",
+      "model": "4 Series Convertible",
+      "categories": [
+        "convertibles"
+      ],
+      "pricePerDayAED": 600,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "2-door luxury convertible"
+        },
+        {
+          "label": "Engine",
+          "value": "2.0L Turbocharged Inline-4 (mild hybrid)"
+        },
+        {
+          "label": "Power Output",
+          "value": "~255 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~295 lb-ft"
+        },
+        {
+          "label": "Transmission",
+          "value": "8-speed automatic (Steptronic)"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "Rear-Wheel Drive (RWD)"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "~30 MPG combined"
+        },
+        {
+          "label": "Fuel Type",
+          "value": "Premium unleaded"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "4 passengers"
+        },
+        {
+          "label": "Cargo Space",
+          "value": "~10.6 cu.ft."
+        },
+        {
+          "label": "Wheelbase",
+          "value": "~112.2 inches"
+        },
+        {
+          "label": "Length",
+          "value": "~187.9 inches"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The BMW 4 Series Convertible combines dynamic performance with premium luxury, delivering an exhilarating open-air driving experience. Designed with BMW’s signature sporty aesthetics, it features a sleek body, aggressive front grille, and a refined soft-top roof that opens in seconds for a true convertible feel.",
+      "images": [
+        {
+          "src": "/fleet/bmw-4-series-convertible/01.webp",
+          "width": 2071,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9964-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-4-series-convertible/02.jpg",
+          "width": 1499,
+          "height": 687,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9900-scaled-2.jpg"
+        },
+        {
+          "src": "/fleet/bmw-4-series-convertible/03.webp",
+          "width": 1545,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9974-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-4-series-convertible/04.webp",
+          "width": 1551,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9909-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-4-series-convertible/05.webp",
+          "width": 1200,
+          "height": 1330,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9895-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-4-series-convertible/06.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9925-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-4-series-convertible/07.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9931-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-4-series-convertible/08.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9932-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-4-series-convertible/09.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_9920-scaled.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/bmw-4-series-convertible/",
+      "liveModified": "2026-10-21T19:39:50"
+    },
+    {
+      "id": 23611,
+      "slug": "mercedes-c-class",
+      "name": "Mercedes-Benz C 200",
+      "liveTitle": "Mercedes C Class",
+      "brand": "Mercedes-Benz",
+      "model": "C-Class C 200",
+      "categories": [],
+      "pricePerDayAED": 600,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "Luxury sedan"
+        },
+        {
+          "label": "Engine",
+          "value": "1.5L Turbocharged Inline-4 with 48V mild-hybrid"
+        },
+        {
+          "label": "Power Output",
+          "value": "~204 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~300 Nm"
+        },
+        {
+          "label": "Transmission",
+          "value": "9-speed automatic (9G-TRONIC)"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "Rear-Wheel Drive (RWD) / Optional AWD (4MATIC)"
+        },
+        {
+          "label": "Top Speed",
+          "value": "~240 km/h"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "~6.0–6.9 L/100 km"
+        },
+        {
+          "label": "Length",
+          "value": "~4751 mm"
+        },
+        {
+          "label": "Width",
+          "value": "~1820 mm"
+        },
+        {
+          "label": "Height",
+          "value": "~1437 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "~2865 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "~455L"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Mercedes C-200 is a refined luxury sedan that blends elegance, comfort, and advanced technology. As part of the latest C-Class generation, it delivers a premium driving experience with a focus on smooth performance, cutting-edge features, and modern design.",
+      "images": [
+        {
+          "src": "/fleet/mercedes-c-class/01.jpg",
+          "width": 1653,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4106-scaled-1.jpg"
+        },
+        {
+          "src": "/fleet/mercedes-c-class/02.webp",
+          "width": 1392,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4048-scaled.webp"
+        },
+        {
+          "src": "/fleet/mercedes-c-class/03.webp",
+          "width": 1260,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4094-scaled.webp"
+        },
+        {
+          "src": "/fleet/mercedes-c-class/04.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4073-scaled.webp"
+        },
+        {
+          "src": "/fleet/mercedes-c-class/05.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4120-scaled.webp"
+        },
+        {
+          "src": "/fleet/mercedes-c-class/06.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4124-scaled.webp"
+        },
+        {
+          "src": "/fleet/mercedes-c-class/07.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_4135-scaled.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/mercedes-c-class/",
+      "liveModified": "2026-10-21T20:26:02"
+    },
+    {
+      "id": 23211,
+      "slug": "ford-mustang-gt-v8-5-0l",
+      "name": "Ford Mustang GT V8",
+      "liveTitle": "Ford Mustang GT V8 5.0L",
+      "brand": "Ford",
+      "model": "Mustang GT V8 5.0L",
+      "categories": [
+        "sports"
+      ],
+      "pricePerDayAED": 600,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Engine",
+          "value": "5.0L V8"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [
+        "AED 12,000 per month.",
+        "Basic comprehensive insurance included.",
+        "250 km per day included; AED 3 per additional km.",
+        "Security deposit: AED 3,000."
+      ],
+      "summary": "",
+      "images": [
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/01.jpg",
+          "width": 1600,
+          "height": 1131,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/452211234-1.jpeg"
+        },
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/02.jpg",
+          "width": 1600,
+          "height": 1565,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/WhatsApp-Image-2026-06-12-at-2.07.06.jpeg"
+        },
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/03.jpg",
+          "width": 1600,
+          "height": 1583,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/112.jpeg"
+        },
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/04.jpg",
+          "width": 1600,
+          "height": 1415,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/WhatsApp-Image-2026-06-12-at-2.07.06-AM.jpeg"
+        },
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/05.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/6443611.jpeg"
+        },
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/06.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/665436.jpeg"
+        },
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/07.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/000.jpeg"
+        },
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/08.jpg",
+          "width": 1600,
+          "height": 808,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/233.jpeg"
+        },
+        {
+          "src": "/fleet/ford-mustang-gt-v8-5-0l/09.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2024/04/34635.jpeg"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/ford-mustang-gt-v8-5-0l/",
+      "liveModified": "2026-10-21T19:40:57"
+    },
+    {
+      "id": 23610,
+      "slug": "bmw-x2",
+      "name": "BMW X2",
+      "liveTitle": "BMW X2",
+      "brand": "BMW",
+      "model": "X2",
+      "categories": [
+        "suvs"
+      ],
+      "pricePerDayAED": 400,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "Compact luxury crossover SUV"
+        },
+        {
+          "label": "Transmission",
+          "value": "7-speed dual-clutch automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "xDrive All-Wheel Drive (AWD)"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "~28 MPG combined"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "5 passengers"
+        },
+        {
+          "label": "Cargo Space",
+          "value": "~25.3 cu.ft. (expandable to ~51.7 cu.ft.)"
+        },
+        {
+          "label": "Length",
+          "value": "~179.3 inches"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "~106 inches"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The BMW X2 is a bold and sporty compact luxury SUV that blends coupe-like styling with everyday practicality. Redesigned with a more aggressive stance, sharp lines, and a sloping roofline, the X2 stands out as one of the most stylish options in its segment.",
+      "images": [
+        {
+          "src": "/fleet/bmw-x2/01.jpg",
+          "width": 1422,
+          "height": 847,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2625-scaled-2.jpg"
+        },
+        {
+          "src": "/fleet/bmw-x2/02.webp",
+          "width": 1422,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2625-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-x2/03.webp",
+          "width": 1261,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2643-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-x2/04.webp",
+          "width": 1351,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2650-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-x2/05.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2636-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-x2/06.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2663-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-x2/07.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2669-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-x2/08.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2676-scaled.webp"
+        },
+        {
+          "src": "/fleet/bmw-x2/09.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_2681-scaled.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/bmw-x2/",
+      "liveModified": "2026-10-21T20:19:45"
+    },
+    {
+      "id": 23636,
+      "slug": "audi-q2",
+      "name": "Audi Q2",
+      "liveTitle": "Audi Q2",
+      "brand": "Audi",
+      "model": "Q2",
+      "categories": [
+        "suvs",
+        "economy"
+      ],
+      "pricePerDayAED": 300,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "5-door compact luxury SUV"
+        },
+        {
+          "label": "Transmission",
+          "value": "6-speed manual / 7-speed S-Tronic automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "Front-wheel drive (FWD) or Quattro AWD"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "Approx. 5.2L/100km (combined)"
+        },
+        {
+          "label": "Acceleration (0–100 km/h)",
+          "value": "~8.2 seconds (1.5L variant)"
+        },
+        {
+          "label": "Length",
+          "value": "~4191–4216 mm"
+        },
+        {
+          "label": "Width",
+          "value": "~1794 mm"
+        },
+        {
+          "label": "Height",
+          "value": "~1498–1526 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2587 mm"
+        },
+        {
+          "label": "Boot space",
+          "value": "~405L (expandable to ~1050L)"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Audi Q2 in elegant white finish delivers a perfect blend of luxury, sporty styling, and everyday practicality. As a premium compact SUV, it is designed for urban driving while offering advanced technology, efficient performance, and Audi’s signature build quality.",
+      "images": [
+        {
+          "src": "/fleet/audi-q2/01.jpg",
+          "width": 1840,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_0759-scaled-1.jpg"
+        },
+        {
+          "src": "/fleet/audi-q2/02.webp",
+          "width": 1567,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_0763-scaled.webp"
+        },
+        {
+          "src": "/fleet/audi-q2/03.webp",
+          "width": 1666,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_0782-scaled.webp"
+        },
+        {
+          "src": "/fleet/audi-q2/04.webp",
+          "width": 1822,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_0826-scaled.webp"
+        },
+        {
+          "src": "/fleet/audi-q2/05.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_0795-scaled.webp"
+        },
+        {
+          "src": "/fleet/audi-q2/06.webp",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_0804-scaled.webp"
+        },
+        {
+          "src": "/fleet/audi-q2/07.webp",
+          "width": 1247,
+          "height": 1200,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/IMG_0808-scaled.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/audi-q2/",
+      "liveModified": "2026-10-21T20:26:47"
+    },
+    {
+      "id": 23803,
+      "slug": "mg-zs-lux-2025",
+      "name": "MG ZS Lux",
+      "liveTitle": "MG ZS Lux 2025",
+      "brand": "MG",
+      "model": "ZS Lux",
+      "categories": [
+        "suvs",
+        "economy"
+      ],
+      "pricePerDayAED": 170,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [
+        {
+          "label": "Body Type",
+          "value": "Compact crossover SUV"
+        },
+        {
+          "label": "Engine",
+          "value": "1.5L Naturally Aspirated Inline-4"
+        },
+        {
+          "label": "Power Output",
+          "value": "~108–118 HP"
+        },
+        {
+          "label": "Torque",
+          "value": "~141–180 Nm"
+        },
+        {
+          "label": "Transmission",
+          "value": "CVT Automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "Front-Wheel Drive (FWD)"
+        },
+        {
+          "label": "Top Speed",
+          "value": "~170 km/h"
+        },
+        {
+          "label": "Fuel Economy",
+          "value": "~16–17 km/L"
+        },
+        {
+          "label": "Seating Capacity",
+          "value": "5 passengers"
+        },
+        {
+          "label": "Boot Space",
+          "value": "~443L (expandable to ~1457L)"
+        },
+        {
+          "label": "Length",
+          "value": "~4320–4430 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "~2585–2610 mm"
+        }
+      ],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The MG ZS Lux 2025 is a modern compact SUV designed to offer a perfect balance of affordability, style, and everyday practicality. With its refreshed design, advanced features, and comfortable interior, the ZS Lux stands out as one of the best value-for-money SUVs in its segment.",
+      "images": [
+        {
+          "src": "/fleet/mg-zs-lux-2025/01.webp",
+          "width": 600,
+          "height": 375,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/white_mg-zs_2025_6344_main_058a731a7f58c1ca4ab08fa7788313bf.webp"
+        },
+        {
+          "src": "/fleet/mg-zs-lux-2025/02.webp",
+          "width": 1280,
+          "height": 960,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/PHOTO-2026-02-18-15-54-48.webp"
+        },
+        {
+          "src": "/fleet/mg-zs-lux-2025/03.webp",
+          "width": 1280,
+          "height": 960,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/PHOTO-2026-02-18-15-54-48-2.webp"
+        },
+        {
+          "src": "/fleet/mg-zs-lux-2025/04.webp",
+          "width": 960,
+          "height": 1280,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/PHOTO-2026-02-18-15-54-48-1.webp"
+        },
+        {
+          "src": "/fleet/mg-zs-lux-2025/05.webp",
+          "width": 960,
+          "height": 1280,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/PHOTO-2026-02-18-15-54-48-3.webp"
+        },
+        {
+          "src": "/fleet/mg-zs-lux-2025/06.webp",
+          "width": 960,
+          "height": 1280,
+          "sourceUrl": "https://formuladriverentacar.com/wp-content/uploads/2026/04/PHOTO-2026-02-18-15-54-48-4.webp"
+        }
+      ],
+      "liveUrl": "https://formuladriverentacar.com/autos/mg-zs-lux-2025/",
+      "liveModified": "2026-06-10T22:47:49"
+    }
+  ]
+}
