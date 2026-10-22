@@ -236,7 +236,7 @@ const errors = [];
   await check("phone: tap targets are at least 24px (WCAG 2.5.8)", async () => {
     const small = await page.$$eval("a, button, summary, select, input", (els) =>
       els
-        .filter((e) => e.offsetParent !== null && !e.closest("dialog:not([open])") && !e.matches(".sr-only-focusable, p a"))
+        .filter((e) => e.offsetParent !== null && !e.closest("dialog:not([open])") && !e.matches(".sr-only-focusable, p a, figcaption a"))
         .map((e) => ({ t: (e.getAttribute("aria-label") || e.textContent || "").trim().slice(0, 30), r: e.getBoundingClientRect() }))
         .filter(({ r }) => r.width > 0 && (r.height < 24 || r.width < 24))
         .map(({ t, r }) => `${t} ${Math.round(r.width)}x${Math.round(r.height)}`),

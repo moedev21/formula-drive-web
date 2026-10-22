@@ -62,7 +62,8 @@ Screenshots: run `node scripts/qa.mjs` and open `.qa/`.
 - Social: Instagram `formuladrivedubai`, X `formulaonedubai`. Roadside assistance 800-4845 (24/7).
 - Hero video: the client's own Ferrari F8 Spider clips (`data/source/video/`, transcoded to
   `public/video/` as 720×1280 and 1080×1920 H.264 MP4 + VP9 WebM, muted, with poster frames).
-- Location photography: Wikimedia Commons, credited in the footer (see Image credits).
+- Location photography: Wikimedia Commons, credited in each photo caption (see Image credits).
+- Footer: "Managed by DevStack Lab" linking to https://devstacklab.com/.
 - Terms and Privacy: not included (pages and links removed).
 - MG ZS Lux main photo: confirmed as the client's own (kept; it is low resolution, 600×375).
 
@@ -95,5 +96,5 @@ Every action leads to a real enquiry, never a simulated reservation or payment: 
   (https://commons.wikimedia.org/wiki/File:Dubai_Marina_Skyline.jpg).
 - "UAE Dubai Marina img1 asv2018-01" by A.Savin, Free Art License 1.3, via Wikimedia Commons
   (https://commons.wikimedia.org/wiki/File:UAE_Dubai_Marina_img1_asv2018-01.jpg).
-Both credits appear in the footer; licence metadata is in `data/source/location-images/commons-credits.json`.
+Each credit appears in the caption under its photo (licence requirement); licence metadata is in `data/source/location-images/commons-credits.json`.
 Neither photo shows or is presented as the JW Marriott hotel; both are captioned "Dubai Marina".

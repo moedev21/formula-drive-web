@@ -39,7 +39,15 @@ export type Location = {
   phone: { display: string; tel: string; whatsapp?: string; label: string };
   directions: string;
   note?: string;
-  image: { src: string; width: number; height: number; alt: string; caption: string };
+  image: {
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+    caption: string;
+    // Third-party photographs carry the credit their licence requires, shown in the caption.
+    credit: { author: string; license: string; licenseUrl: string; source: string };
+  };
 };
 
 export const locations: Location[] = [
@@ -58,6 +66,12 @@ export const locations: Location[] = [
       height: 1600,
       alt: "The Dubai Marina skyline seen from the sea",
       caption: "Dubai Marina",
+      credit: {
+        author: "Norlando Pobre",
+        license: "CC BY 2.0",
+        licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+        source: "https://commons.wikimedia.org/wiki/File:Dubai_Marina_Skyline.jpg",
+      },
     },
   },
   {
@@ -75,6 +89,12 @@ export const locations: Location[] = [
       height: 1500,
       alt: "The Dubai Marina canal and promenade",
       caption: "Dubai Marina",
+      credit: {
+        author: "A.Savin",
+        license: "FAL 1.3",
+        licenseUrl: "https://artlibre.org/licence/lal/en/",
+        source: "https://commons.wikimedia.org/wiki/File:UAE_Dubai_Marina_img1_asv2018-01.jpg",
+      },
     },
   },
 ];
@@ -94,24 +114,6 @@ export const experience = {
     label: "Close-up of the Ferrari badge and wheel on the Formula Drive Ferrari F8 Spider",
   },
 };
-
-// Third-party photographs, credited in the footer as their licences require.
-export const photoCredits = [
-  {
-    title: "Dubai Marina Skyline",
-    author: "Norlando Pobre",
-    license: "CC BY 2.0",
-    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
-    source: "https://commons.wikimedia.org/wiki/File:Dubai_Marina_Skyline.jpg",
-  },
-  {
-    title: "UAE Dubai Marina img1 asv2018-01",
-    author: "A.Savin",
-    license: "Free Art License 1.3",
-    licenseUrl: "https://artlibre.org/licence/lal/en/",
-    source: "https://commons.wikimedia.org/wiki/File:UAE_Dubai_Marina_img1_asv2018-01.jpg",
-  },
-];
 
 export const steps = [
   {

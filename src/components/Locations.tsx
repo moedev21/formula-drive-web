@@ -25,7 +25,16 @@ export function Locations() {
                 <div className="relative aspect-[3/2] overflow-hidden bg-grey">
                   <Image src={loc.image.src} alt={loc.image.alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
                 </div>
-                <figcaption className="t-small mt-2 text-muted">{loc.image.caption}</figcaption>
+                <figcaption className="t-small mt-2 text-muted">
+                  {loc.image.caption} · Photo{" "}
+                  <a href={loc.image.credit.source} target="_blank" rel="noopener" className="link">
+                    {loc.image.credit.author}
+                  </a>
+                  ,{" "}
+                  <a href={loc.image.credit.licenseUrl} target="_blank" rel="noopener" className="link">
+                    {loc.image.credit.license}
+                  </a>
+                </figcaption>
               </figure>
               <h3 className="t-h3 mt-6">{loc.name}</h3>
               <p className="t-small mt-1 text-muted">{loc.detail}</p>

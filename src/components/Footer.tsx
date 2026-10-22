@@ -1,5 +1,5 @@
 import { Logo } from "./Logo";
-import { business, locations, nav, photoCredits } from "@/data/site";
+import { business, locations, nav } from "@/data/site";
 
 // Section 11 — charcoal close: logo, anchors, both locations, contact, social, legal.
 export function Footer() {
@@ -79,20 +79,10 @@ export function Footer() {
         <p className="flex flex-wrap items-center gap-x-6">
           <span>© {year} Formula Drive Rent a Car. Prices in AED per day, excluding 5% VAT.</span>
           <span>
-            Location photos:{" "}
-            {photoCredits.map((c, i) => (
-              <span key={c.source}>
-                {i > 0 && "; "}
-                <a href={c.source} target="_blank" rel="noopener" className="link">
-                  {c.author}
-                </a>
-                ,{" "}
-                <a href={c.licenseUrl} target="_blank" rel="noopener" className="link">
-                  {c.license}
-                </a>
-              </span>
-            ))}
-            , via Wikimedia Commons.
+            Managed by{" "}
+            <a href="https://devstacklab.com/" target="_blank" rel="noopener" className="link text-white">
+              DevStack Lab
+            </a>
           </span>
         </p>
       </div>
