@@ -1,7 +1,7 @@
 import { business } from "@/data/site";
 
-export function whatsappUrl(message: string) {
-  return `https://wa.me/${business.whatsapp.e164}?text=${encodeURIComponent(message)}`;
+export function whatsappUrl(message: string, number: string = business.whatsapp.e164) {
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
 export const generalEnquiry = whatsappUrl(

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { business, locations } from "@/data/site";
-import { generalEnquiry } from "@/lib/whatsapp";
+import { generalEnquiry, whatsappUrl } from "@/lib/whatsapp";
 import { ArrowRight, PhoneIcon, WhatsAppIcon } from "./icons";
 
 // Section 07 — two places to collect a car in Dubai Marina.
@@ -21,9 +21,12 @@ export function Locations() {
         <ul className="mt-14 grid gap-14 md:grid-cols-2 md:gap-6 lg:mt-20">
           {locations.map((loc, i) => (
             <li key={loc.id} data-reveal style={{ ["--i" as string]: i }} className="flex flex-col">
-              <div className="relative aspect-[3/2] overflow-hidden bg-grey">
-                <Image src={loc.image.src} alt={loc.image.alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
-              </div>
+              <figure>
+                <div className="relative aspect-[3/2] overflow-hidden bg-grey">
+                  <Image src={loc.image.src} alt={loc.image.alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+                </div>
+                <figcaption className="t-small mt-2 text-muted">{loc.image.caption}</figcaption>
+              </figure>
               <h3 className="t-h3 mt-6">{loc.name}</h3>
               <p className="t-small mt-1 text-muted">{loc.detail}</p>
               <address className="mt-4 not-italic">
@@ -33,16 +36,28 @@ export function Locations() {
                   </span>
                 ))}
               </address>
+              <p className="mt-3">
+                <span className="font-semibold">Open</span> {loc.hours}
+              </p>
               {loc.note && <p className="mt-3 max-w-[48ch] text-muted">{loc.note}</p>}
               <ul className="mt-5 flex flex-col gap-1">
                 <li>
-                  <a href={generalEnquiry} target="_blank" rel="noopener" className="inline-flex min-h-11 items-center gap-3 link">
-                    <WhatsAppIcon /> WhatsApp {business.whatsapp.display}
+                  <a
+                    href={
+                      loc.phone.whatsapp
+                        ? whatsappUrl(`Hello Formula Drive, I'd like to rent a car from your ${loc.name} counter.`, loc.phone.whatsapp)
+                        : generalEnquiry
+                    }
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex min-h-11 items-center gap-3 link"
+                  >
+                    <WhatsAppIcon /> WhatsApp {loc.phone.whatsapp ? loc.phone.display : business.whatsapp.display}
                   </a>
                 </li>
                 <li>
-                  <a href={`tel:${business.landline.tel}`} className="inline-flex min-h-11 items-center gap-3 link">
-                    <PhoneIcon /> Call {business.landline.display}
+                  <a href={`tel:${loc.phone.tel}`} className="inline-flex min-h-11 items-center gap-3 link">
+                    <PhoneIcon /> Call {loc.phone.display}
                   </a>
                 </li>
               </ul>

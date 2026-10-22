@@ -1,5 +1,5 @@
 import { Logo } from "./Logo";
-import { business, locations, nav } from "@/data/site";
+import { business, locations, nav, photoCredits } from "@/data/site";
 
 // Section 11 — charcoal close: logo, anchors, both locations, contact, social, legal.
 export function Footer() {
@@ -33,6 +33,12 @@ export function Footer() {
                 </span>
               ))}
             </address>
+            <p className="mt-2 text-white/85">Open {loc.hours}</p>
+            {loc.phone.label === "Counter" && (
+              <a href={`tel:${loc.phone.tel}`} className="inline-flex min-h-11 items-center link text-white/85">
+                {loc.phone.display}
+              </a>
+            )}
           </div>
         ))}
 
@@ -64,7 +70,7 @@ export function Footer() {
         <ul className="flex flex-wrap gap-x-6">
           {business.social.map((s) => (
             <li key={s.href}>
-              <a href={s.href} target="_blank" rel="noopener" className="inline-flex min-h-11 items-center link text-white">
+              <a href={s.href} target="_blank" rel="noopener" className="inline-flex min-h-11 min-w-11 items-center justify-center link text-white">
                 {s.label}
               </a>
             </li>
@@ -72,12 +78,22 @@ export function Footer() {
         </ul>
         <p className="flex flex-wrap items-center gap-x-6">
           <span>© {year} Formula Drive Rent a Car. Prices in AED per day, excluding 5% VAT.</span>
-          <a href="/terms" className="link inline-flex min-h-11 items-center">
-            Terms
-          </a>
-          <a href="/privacy" className="link inline-flex min-h-11 items-center">
-            Privacy
-          </a>
+          <span>
+            Location photos:{" "}
+            {photoCredits.map((c, i) => (
+              <span key={c.source}>
+                {i > 0 && "; "}
+                <a href={c.source} target="_blank" rel="noopener" className="link">
+                  {c.author}
+                </a>
+                ,{" "}
+                <a href={c.licenseUrl} target="_blank" rel="noopener" className="link">
+                  {c.license}
+                </a>
+              </span>
+            ))}
+            , via Wikimedia Commons.
+          </span>
         </p>
       </div>
       </div>

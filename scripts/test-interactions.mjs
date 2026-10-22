@@ -141,6 +141,27 @@ const errors = [];
     assert.equal(await page.locator("dialog.qv").evaluate((d) => d.open), false);
   });
 
+  await check("videos play on screen, pause off screen, and the pause button works", async () => {
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(1500);
+    const hero = page.locator("#top video");
+    assert.equal(await hero.evaluate((v) => v.paused), false, "hero video not playing");
+    await page.locator("#top").getByRole("button", { name: "Pause video" }).click();
+    assert.equal(await hero.evaluate((v) => v.paused), true, "pause did not pause");
+    await page.locator("#top").getByRole("button", { name: "Play video" }).click();
+    assert.equal(await hero.evaluate((v) => v.paused), false, "play did not resume");
+    await page.locator("#faq").scrollIntoViewIfNeeded();
+    await page.waitForTimeout(500);
+    assert.equal(await hero.evaluate((v) => v.paused), true, "hero video still playing off screen");
+  });
+
+  await check("JW Marriott counter shows its own phone and hours", async () => {
+    const text = await page.locator("#locations").innerText();
+    assert.match(text, /\+971 55 791 6550/);
+    assert.match(text, /9 am – 6 pm/);
+    assert.equal(await page.locator('#locations a[href="tel:+971557916550"]').count(), 1);
+  });
+
   await check("FAQ items open and close", async () => {
     const d = page.locator("#faq details").first();
     await d.locator("summary").click();
@@ -215,7 +236,7 @@ const errors = [];
   await check("phone: tap targets are at least 24px (WCAG 2.5.8)", async () => {
     const small = await page.$$eval("a, button, summary, select, input", (els) =>
       els
-        .filter((e) => e.offsetParent !== null && !e.closest("dialog:not([open])") && !e.matches(".sr-only-focusable, p > a"))
+        .filter((e) => e.offsetParent !== null && !e.closest("dialog:not([open])") && !e.matches(".sr-only-focusable, p a"))
         .map((e) => ({ t: (e.getAttribute("aria-label") || e.textContent || "").trim().slice(0, 30), r: e.getBoundingClientRect() }))
         .filter(({ r }) => r.width > 0 && (r.height < 24 || r.width < 24))
         .map(({ t, r }) => `${t} ${Math.round(r.width)}x${Math.round(r.height)}`),
@@ -234,6 +255,7 @@ const errors = [];
   await check("reduced motion: hero is not pinned and all content is visible", async () => {
     const h = await page.evaluate(() => document.getElementById("top").offsetHeight);
     assert.ok(h <= 900, `hero height ${h}`);
+    assert.equal(await page.locator("#top video").evaluate((v) => v.paused), true, "video autoplayed under reduced motion");
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await page.waitForTimeout(300);
     const hidden = await page.$$eval("[data-reveal]", (els) => els.filter((e) => getComputedStyle(e).opacity !== "1").length);

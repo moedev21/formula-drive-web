@@ -35,6 +35,11 @@ site can be checked against the original.
 | Audi Q2 | Audi Q2 | 300 | SUVs, Economy | /autos/audi-q2/ |
 | MG ZS Lux | MG ZS Lux 2025 | 170 | SUVs, Economy | /autos/mg-zs-lux-2025/ |
 
+**Names and taglines (update 22 Oct 2026).** The client supplied the display names and taglines;
+the new site uses them (e.g. "Lamborghini EVO Spider — Open-Top Supercar Performance"). The client's
+list also carried different prices for three cars (EVO Spider 2,500, F8 Spider 3,500, Urus 2,300);
+the client then instructed to keep the live homepage prices, so those are what the site shows.
+
 **Prices.** Taken from the homepage, as instructed. All 15 homepage prices match the REST API
 `_auto_price` and the price shown on each detail page, so every price is marked `verified`.
 The new site shows them as **"AED x / day, excl. 5% VAT"**.
@@ -103,13 +108,11 @@ The new site shows them as **"AED x / day, excl. 5% VAT"**.
     EVO Spider; `/autos/gmc-yukon-elevation-2025-black/` → Ferrari F8 Spider.
 20. **Footer links "About Us" and "Rental Policy" return 404.**
 21. **JW Marriott Hotel Marina counter is not mentioned anywhere on the live site** (searched all
-    content). The new site shows it by name, with the main WhatsApp and phone numbers and Google
-    Maps directions to the hotel. *Please confirm the counter's hours, phone, and exact location
-    inside the hotel.*
-22. **Opening hours are not published on the live site.** → Not shown.
-23. "24/7 Roadside Assistance 800-4845" — *please confirm this number belongs to Formula Drive's
-    roadside service provider.*
-24. The Twitter link points to `twitter.com/formulaonedubai`. *Please confirm that handle.*
+    content). Resolved: client confirmed 9 am – 6 pm and +971 55 791 6550; consider adding it to the
+    live site too.
+22. **Opening hours are not published on the live site.** Resolved: client confirmed 9 am – 6 pm.
+23. Roadside assistance 800-4845 (24/7): confirmed by the client.
+24. X handle `formulaonedubai`: confirmed by the client (now linked as https://x.com/formulaonedubai).
 
 ### Reviews
 25. The homepage widget (Trustindex) shows **"47 Google reviews"** but doesn't expose an average

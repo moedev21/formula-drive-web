@@ -17,6 +17,7 @@ npm run build && npm start
 | Path | Contents |
 | --- | --- |
 | `src/app/page.tsx` | The page: the eleven sections in order |
+| `src/components/LoopVideo.tsx` | Muted looping video: plays only on screen, pause button, lazy optimised poster, still under reduced motion |
 | `src/app/layout.tsx` | Fonts, metadata, Open Graph, JSON-LD (`AutoRental` + fleet `ItemList`) |
 | `src/app/globals.css` | Design tokens, type steps, buttons, motion, reduced-motion rules |
 | `src/components/` | One component per section, plus `QuickView`, `Logo`, `Reveal`, `icons` |
@@ -44,38 +45,34 @@ or directly to `fleet.json`, and add a `CURATION` row.
 
 | Check | Result |
 | --- | --- |
-| `node scripts/test-interactions.mjs` | 21/21 pass: filters and counts, sorting, Quick View (no navigation, focus on title, gallery buttons and arrow keys, Esc, backdrop, focus restored to the card), enquiry validation and WhatsApp hand-off, FAQ, anchors, Maps links, active nav, phone menu (focus, Esc, link closes), phone Quick View, 24px targets, reduced motion, no-JavaScript fallback |
+| `node scripts/test-interactions.mjs` | 23/23 pass (including video play/pause/off-screen and the JW Marriott contact details): filters and counts, sorting, Quick View (no navigation, focus on title, gallery buttons and arrow keys, Esc, backdrop, focus restored to the card), enquiry validation and WhatsApp hand-off, FAQ, anchors, Maps links, active nav, phone menu (focus, Esc, link closes), phone Quick View, 24px targets, reduced motion, no-JavaScript fallback |
 | `node scripts/a11y.mjs` (axe-core, WCAG 2.2 AA) | 0 violations at 1440 and 390, page and open Quick View |
 | `node scripts/qa.mjs` | No horizontal overflow at 1440 / 768 / 390, no console errors or warnings |
-| taste-skill `lint.mjs` / `inspect.mjs` | 0 FAIL. Two WARNs kept on purpose: no video (no footage of the real fleet exists, and stock footage would misrepresent the cars) and the reviews carousel scrolls sideways (deliberate, with previous/next buttons and keyboard access) |
-| Lighthouse (production, simulated) | Desktop: 100 / 100 / 100 / 100. Mobile: performance 94–99 (LCP 2.2–3.0 s on simulated slow 4G), accessibility 100, best practices 100, SEO 100 |
+| taste-skill `lint.mjs` / `inspect.mjs` | 0 FAIL. One WARN kept on purpose: the reviews carousel scrolls sideways (with previous/next buttons and keyboard access) |
+| Lighthouse (production, simulated) | Desktop: 100 / 100 / 100 / 100. Mobile: performance 97–99 (LCP 2.2–2.6 s on simulated slow 4G), accessibility 100, best practices 100, SEO 100 |
 
 Screenshots: run `node scripts/qa.mjs` and open `.qa/`.
 
-## Before launch — needs the client
+## Client decisions (22 Oct 2026)
 
-1. **Confirm prices exclude 5% VAT.** The live site shows "$ +VET". The new site says "AED … / day excl. 5% VAT".
-2. **Confirm car names.** The new site uses the names from the live descriptions (Huracán EVO Spyder,
-   911 GTS Cabriolet, G63 AMG, C 200), which differ from the listing titles.
-3. **Replace generic specs with confirmed figures for each car** and supply model years. Today the
-   Quick View shows "Reference specifications" exactly as listed on the live site, many of them approximate.
-4. **JW Marriott Hotel Marina counter:** confirm hours, phone and the counter's exact location in the
-   hotel. It is not mentioned anywhere on the live site. The page names it as Formula Drive's own counter
-   and implies no partnership with the hotel.
-5. **Opening hours** (not published on the live site, so not shown).
-6. **Roadside number 800-4845 and the X/Twitter handle `formulaonedubai`** — please confirm.
-7. **MG ZS photo**: low resolution, and possibly a dealer or stock image. Confirm the rights or supply your own photo.
-8. **Original camera files for the hero cars** (current maximum is about 1,600–2,200px wide):
-   Huracán EVO Spyder, Ferrari F8 Spider, Urus, G63.
-9. **Location photography.** The location blocks use Formula Drive's own photos of its cars in the
-   Marina. Licensed Dubai Marina photos were found on Wikimedia Commons ("Dubai Marina by day",
-   Gfilip, CC BY-SA 4.0; "Dubai Marina Skyline", Norlando Pobre, CC BY 2.0) but could not be
-   downloaded because the API was rate-limiting this environment. Your own photos of the Princess Tower
-   entrance and the hotel counter would be best.
-10. **Terms and Privacy.** `/terms` and `/privacy` are placeholders (noindex) because the live
-    site's "Rental Policy" page returns 404. Supply the documents.
-11. Fix on the live site in the meantime: broken redirects (`/autos/bmw-x2-2025-white/` → Lamborghini,
-    `/autos/gmc-yukon-elevation-2025-black/` → Ferrari) and the 404 footer links.
+- Prices: the live homepage prices, shown as "AED x / day excl. 5% VAT" (VAT treatment confirmed).
+- Car names and taglines: from the client's list (`CURATION` in `scripts/build-fleet.py`).
+- Specs and model years: no confirmed figures needed; Quick View shows the live site's reference specs.
+- Opening hours: 9 am – 6 pm at both locations. JW Marriott Hotel Marina counter: +971 55 791 6550.
+- Social: Instagram `formuladrivedubai`, X `formulaonedubai`. Roadside assistance 800-4845 (24/7).
+- Hero video: the client's own Ferrari F8 Spider clips (`data/source/video/`, transcoded to
+  `public/video/` as 720×1280 and 1080×1920 H.264 MP4 + VP9 WebM, muted, with poster frames).
+- Location photography: Wikimedia Commons, credited in the footer (see Image credits).
+- Terms and Privacy: not included (pages and links removed).
+
+## Still open
+
+1. **MG ZS main photo** (`public/fleet/mg-zs-lux-2025/01.webp`): 600×375, and its filename suggests a
+   dealer/stock image. Replace with your own photo, or confirm you have the rights.
+2. Live-site fixes: wrong redirects (`/autos/bmw-x2-2025-white/` → Lamborghini,
+   `/autos/gmc-yukon-elevation-2025-black/` → Ferrari) and the 404 footer links.
+3. Opening days are not stated; the site shows "9 am – 6 pm" without days and the structured data
+   omits opening hours until days are confirmed.
 
 ## SEO and migration
 
@@ -85,6 +82,7 @@ Screenshots: run `node scripts/qa.mjs` and open `.qa/`.
   approved. The cards already link to them (a no-JavaScript fallback, and crawlable), so both can coexist.
 - Before launch: add `sitemap.ts` / `robots.ts` for the chosen domain, and connect analytics (none
   is included).
+- Repository: https://github.com/moedev21/formula-drive-web
 
 ## Booking journey
 
@@ -92,6 +90,13 @@ Every action leads to a real enquiry, never a simulated reservation or payment: 
 +971 55 945 3676 (with the car, dates, pick-up and name prefilled from Quick View), a call to
 +971 4 421 4433, or email.
 
-## Image credits
+## Image and video credits
 
-All fleet photographs come from formuladriverentacar.com (the client's own). No third-party images are used.
+- Fleet photographs: formuladriverentacar.com (the client's own).
+- Ferrari F8 Spider videos: supplied by the client.
+- "Dubai Marina Skyline" by Norlando Pobre, CC BY 2.0, via Wikimedia Commons
+  (https://commons.wikimedia.org/wiki/File:Dubai_Marina_Skyline.jpg).
+- "UAE Dubai Marina img1 asv2018-01" by A.Savin, Free Art License 1.3, via Wikimedia Commons
+  (https://commons.wikimedia.org/wiki/File:UAE_Dubai_Marina_img1_asv2018-01.jpg).
+Both credits appear in the footer; licence metadata is in `data/source/location-images/commons-credits.json`.
+Neither photo shows or is presented as the JW Marriott hotel; both are captioned "Dubai Marina".

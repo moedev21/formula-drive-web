@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { heroSeries, formatAED } from "@/data/fleet";
 import { generalEnquiry } from "@/lib/whatsapp";
 import { ArrowRight, WhatsAppIcon } from "./icons";
+import { LoopVideo } from "./LoopVideo";
 
 // Each car after the first holds the stage for this much scroll (in svh).
 const STEP_SVH = 55;
@@ -89,7 +90,7 @@ export function Hero() {
 
         <div className="mt-5 flex min-h-0 flex-1 flex-col gap-x-6 gap-y-5 lg:mt-8 lg:grid lg:grid-cols-12">
           {/* The fleet, changing under the pinned headline */}
-          <div className="hero-media relative min-h-[240px] flex-1 overflow-hidden bg-grey lg:order-2 lg:col-span-8 lg:col-start-5">
+          <div className="hero-media relative min-h-[240px] flex-1 overflow-hidden bg-grey lg:order-2 lg:col-span-6 lg:col-start-4">
             {heroSeries.map(({ car, img }, i) => (
               <Image
                 key={car.slug}
@@ -106,7 +107,16 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="flex flex-col gap-5 lg:order-1 lg:col-span-4 lg:gap-6">
+          {/* Desktop only: a portrait clip of the Ferrari F8 Spider beside the fleet photographs. */}
+          <LoopVideo
+            src="/video/ferrari-f8-headlight"
+            size={1280}
+            sizes="25vw"
+            label="Close-up of the Formula Drive Ferrari F8 Spider's headlight and bonnet"
+            className="hero-media hidden lg:order-3 lg:col-span-3 lg:block"
+          />
+
+          <div className="flex flex-col gap-5 lg:order-1 lg:col-span-3 lg:gap-6">
             {pinned && (
               <ol aria-label="Cars in this showcase" className="mb-auto hidden flex-col lg:flex">
                 {heroSeries.map(({ car }, i) => (
@@ -138,7 +148,7 @@ export function Hero() {
                 </span>
               )}
             </p>
-            <div className="hero-fade grid gap-3 sm:flex sm:flex-wrap" style={{ ["--i" as string]: 2 }}>
+            <div className="hero-fade grid gap-3 sm:flex sm:flex-wrap lg:grid" style={{ ["--i" as string]: 2 }}>
               <a href="#fleet" className="btn btn-dark">
                 Explore fleet <ArrowRight />
               </a>

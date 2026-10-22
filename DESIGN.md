@@ -190,9 +190,11 @@ The sticky header separates with its 1px line, not a shadow.
 - Fleet images: 4:3 landscape crops on `--grey`, `object-fit: cover`, focal point stored
   per image in the dataset; square corners; no filters, no overlays.
 - Hero/pinned run: the 5–6 best-quality fleet photographs, same crop (3:2), same treatment.
-- Lifestyle/location photography: real photographs of Dubai Marina and Princess Tower,
-  licensed and credited. A photograph of the JW Marriott Marina building is only used if it is
-  licensed for commercial use and captioned as the location.
+- Location photography: licensed Dubai Marina photographs (Wikimedia Commons), captioned "Dubai
+  Marina" and credited in the footer. No photo is presented as the JW Marriott hotel.
+- Video: the client's own portrait Ferrari F8 Spider clips, muted loops (desktop hero pane, Experience
+  section). They play only on screen, always have a pause button, show a still under reduced motion,
+  and use a lazy optimised poster so they never compete with the hero photograph.
 - Text on photographs only over a neutral scrim limited to the text's area.
 - `next/image` everywhere: AVIF/WebP, `sizes` set per layout, hero image `priority`,
   every image with width, height and descriptive alt ("Ferrari F8 Tributo in red, front three-quarter").

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { experience } from "@/data/site";
 import { generalEnquiry } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "./icons";
+import { LoopVideo } from "./LoopVideo";
 
 // Section 05 — split stage: the photograph holds still while the argument scrolls beside it.
 export function Experience() {
@@ -10,15 +10,13 @@ export function Experience() {
       <div className="frame grid gap-10 lg:grid-cols-12 lg:gap-6">
         <div className="lg:col-span-6">
           <div className="lg:sticky lg:top-[calc(var(--header-h)+24px)]">
-          <div className="relative aspect-[4/5] overflow-hidden bg-grey lg:aspect-auto lg:h-[calc(100svh-var(--header-h)-48px)]">
-            <Image
-              src={experience.image.src}
-              alt={experience.image.alt}
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <LoopVideo
+            src={experience.video.src}
+            size={1920}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            label={experience.video.label}
+            className="aspect-[4/5] lg:aspect-auto lg:h-[calc(100svh-var(--header-h)-48px)]"
+          />
           </div>
         </div>
 

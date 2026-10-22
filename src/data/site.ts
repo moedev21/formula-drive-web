@@ -8,12 +8,13 @@ export const business = {
   url: "https://formuladriverentacar.com",
   whatsapp: { display: "+971 55 945 3676", e164: "971559453676" },
   landline: { display: "+971 4 421 4433", tel: "+97144214433" },
-  roadside: { display: "800-4845", tel: "8004845", toConfirm: true },
+  roadside: { display: "800-4845", tel: "8004845" },
+  hours: "9 am – 6 pm",
   email: "formuladriverentacar@gmail.com",
   social: [
     { label: "Instagram", href: "https://www.instagram.com/formuladrivedubai/" },
     { label: "Facebook", href: "https://www.facebook.com/formuladriverentacardubai/" },
-    { label: "X (Twitter)", href: "https://twitter.com/formulaonedubai", toConfirm: true },
+    { label: "X", href: "https://x.com/formulaonedubai" },
   ],
   googleReviews: {
     count: 47,
@@ -34,9 +35,11 @@ export type Location = {
   name: string;
   detail: string;
   addressLines: string[];
+  hours: string;
+  phone: { display: string; tel: string; whatsapp?: string; label: string };
   directions: string;
   note?: string;
-  image: { src: string; width: number; height: number; alt: string };
+  image: { src: string; width: number; height: number; alt: string; caption: string };
 };
 
 export const locations: Location[] = [
@@ -45,13 +48,16 @@ export const locations: Location[] = [
     name: "Dubai Marina — Princess Tower",
     detail: "Formula Drive office",
     addressLines: ["Unit-06, Ground Floor, Princess Tower", "Dubai Marina, Dubai, UAE"],
+    hours: "9 am – 6 pm",
+    phone: { display: "+971 4 421 4433", tel: "+97144214433", label: "Landline" },
     directions:
       "https://www.google.com/maps/dir/?api=1&destination=Formula+Drive+Rent+a+Car+Princess+Tower+Dubai+Marina",
     image: {
-      src: "/fleet/rent-lamborghini-urus/02.jpg",
-      width: 1600,
-      height: 1426,
-      alt: "Formula Drive's Lamborghini Urus in front of the Dubai Marina towers",
+      src: "/locations/dubai-marina-skyline.jpg",
+      width: 2400,
+      height: 1600,
+      alt: "The Dubai Marina skyline seen from the sea",
+      caption: "Dubai Marina",
     },
   },
   {
@@ -59,13 +65,16 @@ export const locations: Location[] = [
     name: "JW Marriott Hotel Marina",
     detail: "Formula Drive rental counter",
     addressLines: ["JW Marriott Hotel Marina", "Dubai Marina, Dubai, UAE"],
-    note: "Formula Drive operates its own counter at the hotel. Reservations and enquiries go through the Formula Drive team below.",
+    hours: "9 am – 6 pm",
+    phone: { display: "+971 55 791 6550", tel: "+971557916550", whatsapp: "971557916550", label: "Counter" },
+    note: "Formula Drive operates its own rental counter at the hotel.",
     directions: "https://www.google.com/maps/dir/?api=1&destination=JW+Marriott+Hotel+Marina+Dubai",
     image: {
-      src: "/fleet/ferrari-f8-spider/03.webp",
-      width: 1280,
-      height: 956,
-      alt: "Formula Drive's Ferrari F8 Spider with Ain Dubai behind it",
+      src: "/locations/dubai-marina-canal.jpg",
+      width: 2400,
+      height: 1500,
+      alt: "The Dubai Marina canal and promenade",
+      caption: "Dubai Marina",
     },
   },
 ];
@@ -80,13 +89,29 @@ export const experience = {
     { title: "No third-party fees", text: "Rent a car in Dubai without a broker's markup." },
     { title: "Zero-deposit option", text: "Available on request, alongside standard deposits." },
   ],
-  image: {
-    src: "/fleet/lamborghini-evo-spider/03.webp",
-    width: 1200,
-    height: 1282,
-    alt: "Formula Drive's Lamborghini Huracán EVO Spyder, roof down, in Dubai",
+  video: {
+    src: "/video/ferrari-f8-badge",
+    label: "Close-up of the Ferrari badge and wheel on the Formula Drive Ferrari F8 Spider",
   },
 };
+
+// Third-party photographs, credited in the footer as their licences require.
+export const photoCredits = [
+  {
+    title: "Dubai Marina Skyline",
+    author: "Norlando Pobre",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    source: "https://commons.wikimedia.org/wiki/File:Dubai_Marina_Skyline.jpg",
+  },
+  {
+    title: "UAE Dubai Marina img1 asv2018-01",
+    author: "A.Savin",
+    license: "Free Art License 1.3",
+    licenseUrl: "https://artlibre.org/licence/lal/en/",
+    source: "https://commons.wikimedia.org/wiki/File:UAE_Dubai_Marina_img1_asv2018-01.jpg",
+  },
+];
 
 export const steps = [
   {
@@ -168,6 +193,10 @@ export const faqs = [
   {
     q: "What documents do I need?",
     a: "UAE residents: a UAE driving licence and Emirates ID. Visitors: passport, visit visa, home-country driving licence and an International Driving Permit (IDP).",
+  },
+  {
+    q: "What are your opening hours?",
+    a: "Our Dubai Marina office in Princess Tower and our counter at JW Marriott Hotel Marina are open 9 am to 6 pm. WhatsApp enquiries are answered around the clock, and roadside assistance is available 24/7 on 800-4845.",
   },
   {
     q: "How old do I need to be?",
