@@ -62,7 +62,7 @@ export function formatAmount(n: number) {
 }
 
 // Cars shown in the home page banner, in order: each with its photo and its own video clip
-// (the client's footage in public/video, desktop only).
+// (the client's footage in public/video).
 export const heroSeries = [
   { slug: "lamborghini-evo-spider", image: 0, video: "/video/lamborghini-evo-spider", detail: "rear diffuser and exhaust" },
   { slug: "ferrari-f8-spider", image: 2, video: "/video/ferrari-f8-headlight", detail: "headlight and bonnet" },

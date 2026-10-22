@@ -91,8 +91,10 @@ export function Hero() {
         </p>
 
         <div className="mt-5 flex min-h-0 flex-1 flex-col gap-x-6 gap-y-5 lg:mt-8 lg:grid lg:grid-cols-12">
+          {/* Photo and clip side by side below desktop; on desktop this wrapper dissolves into the grid. */}
+          <div className="flex min-h-[260px] flex-1 gap-3 lg:contents [@media(max-height:760px)]:min-h-[150px]">
           {/* The fleet, changing under the pinned headline */}
-          <div className="hero-media relative min-h-[240px] flex-1 overflow-hidden bg-grey lg:order-2 lg:col-span-6 lg:col-start-4">
+          <div className="hero-media relative flex-[3] overflow-hidden bg-grey lg:order-2 lg:col-span-6 lg:col-start-4">
             {heroSeries.map(({ car, img }, i) => (
               <Image
                 key={car.slug}
@@ -100,7 +102,7 @@ export function Hero() {
                 alt={`${car.name} from the Formula Drive fleet`}
                 fill
                 priority={i === 0}
-                sizes="(min-width: 1024px) 66vw, 100vw"
+                sizes="(min-width: 1024px) 50vw, 60vw"
                 className={`object-cover transition-[opacity,transform] duration-700 ease-[var(--ease-out)] ${
                   i === step ? "scale-100 opacity-100" : "scale-[1.04] opacity-0"
                 }`}
@@ -109,16 +111,17 @@ export function Hero() {
             ))}
           </div>
 
-          {/* Desktop only: the current car's own portrait clip beside its photograph. Keyed by car,
-              so it swaps to the next clip as the banner moves on. */}
+          {/* The current car's own portrait clip beside its photograph. Keyed by car, so it swaps to
+              the next clip as the banner moves on. */}
           <LoopVideo
             key={current.car.slug}
             src={current.video}
             size={1280}
-            sizes="25vw"
+            sizes="(min-width: 1024px) 25vw, 40vw"
             label={current.videoLabel}
-            className="hero-media hidden lg:order-3 lg:col-span-3 lg:block"
+            className="hero-media flex-[2] lg:order-3 lg:col-span-3"
           />
+          </div>
 
           <div className="flex flex-col gap-5 lg:order-1 lg:col-span-3 lg:gap-6">
             {pinned && (
@@ -153,7 +156,11 @@ export function Hero() {
                 </span>
               )}
             </p>
-            <div className="hero-fade grid gap-3 sm:flex sm:flex-wrap lg:grid" style={{ ["--i" as string]: 2 }}>
+            {/* On short phones the two actions share one row so the banner fits the first screen. */}
+            <div
+              className="hero-fade grid gap-3 sm:flex sm:flex-wrap lg:grid [@media(max-height:760px)]:grid-cols-2 [@media(max-height:760px)_and_(max-width:639px)]:[&>a]:px-3 [@media(max-height:760px)_and_(max-width:639px)]:[&_svg]:hidden"
+              style={{ ["--i" as string]: 2 }}
+            >
               <a href="#fleet" className="btn btn-dark">
                 Explore fleet <ArrowRight />
               </a>
