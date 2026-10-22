@@ -81,7 +81,7 @@ Its expanded width echoes the logo's wide geometric wordmark without copying it.
 
 | Step | Use | Desktop | Phone | Settings |
 | --- | --- | --- | --- | --- |
-| `display` | Hero line, pinned; the three verbs | fitted to the frame: `min(172px, 100cqi / 11.1)` (≈122px at 1440) | `100cqi / 8.75` (≈41px at 390) | wdth 125 (wdth 100 on phones), wght 700, uppercase, tracking -0.03em, leading 0.9 |
+| `display` | Hero line (one line from tablet up), pinned; the three verbs | fitted to the frame: `min(112px, 100cqi / 18.1)` (≈75px at 1440) | `100cqi / 8.75` (≈41px at 390) | wdth 125 (wdth 100 on phones), wght 700, uppercase, tracking -0.03em, leading 0.9 |
 | `h2` | Section headings | `clamp(34px, 5vw, 84px)` (72px at 1440) | 34px | wdth 112, wght 650, tracking -0.025em, leading 0.98 |
 | `h3` | Car names, statements, FAQ questions, quotes | `clamp(21px, 1.6vw, 26px)` (23px at 1440) | 21px | wdth 100, wght 600, tracking -0.01em, leading 1.12 |
 | `body` | Running text, buttons, form fields | 18px | 18px | wdth 100, wght 400, leading 1.55, measure 45–68ch |

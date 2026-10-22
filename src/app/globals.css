@@ -72,14 +72,15 @@ body {
 }
 
 /* ---------- Type steps (five sizes only) ---------- */
-/* Sized to the hero frame (a size container) so "EXTRAORDINARY." always fits one line:
-   the word measures 8.59em at wdth 100 and 10.96em at wdth 125. */
+/* Sized to the hero frame (a size container): two lines on phones ("EXTRAORDINARY." is 8.59em at
+   wdth 100), one line from tablet up. */
 @utility t-display {
   font-size: min(172px, calc(100cqi / 8.75));
   font-weight: 700;
   font-variation-settings: "wdth" 100;
+  /* From tablet up the whole line sits on one row: "DRIVE THE EXTRAORDINARY." measures 17.92em. */
   @media (min-width: 48rem) {
-    font-size: min(172px, calc(100cqi / 11.1));
+    font-size: min(112px, calc(100cqi / 18.1));
     font-variation-settings: "wdth" 125;
   }
   letter-spacing: -0.03em;

@@ -74,11 +74,11 @@ export function Hero() {
         }`}
       >
         <h1 id="hero-title" className="t-display relative z-10 text-charcoal" aria-label="Drive the extraordinary.">
-          <span className="block overflow-hidden pb-[0.04em]">
+          <span className="block overflow-hidden pb-[0.04em] md:inline-block">
             <span className="hero-word" style={{ ["--i" as string]: 0 }}>Drive</span>{" "}
             <span className="hero-word" style={{ ["--i" as string]: 1 }}>the</span>
-          </span>
-          <span className="block overflow-hidden pb-[0.04em]">
+          </span>{" "}
+          <span className="block overflow-hidden pb-[0.04em] md:inline-block">
             <span className="hero-word" style={{ ["--i" as string]: 2 }}>extraordinary.</span>
           </span>
         </h1>
