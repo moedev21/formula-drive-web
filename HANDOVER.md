@@ -58,21 +58,18 @@ Screenshots: run `node scripts/qa.mjs` and open `.qa/`.
 - Prices: the live homepage prices, shown as "AED x / day excl. 5% VAT" (VAT treatment confirmed).
 - Car names and taglines: from the client's list (`CURATION` in `scripts/build-fleet.py`).
 - Specs and model years: no confirmed figures needed; Quick View shows the live site's reference specs.
-- Opening hours: 9 am – 6 pm at both locations. JW Marriott Hotel Marina counter: +971 55 791 6550.
+- Opening hours: daily, 9 am – 6 pm at both locations (also in the JSON-LD). JW Marriott Hotel Marina counter: +971 55 791 6550.
 - Social: Instagram `formuladrivedubai`, X `formulaonedubai`. Roadside assistance 800-4845 (24/7).
 - Hero video: the client's own Ferrari F8 Spider clips (`data/source/video/`, transcoded to
   `public/video/` as 720×1280 and 1080×1920 H.264 MP4 + VP9 WebM, muted, with poster frames).
 - Location photography: Wikimedia Commons, credited in the footer (see Image credits).
 - Terms and Privacy: not included (pages and links removed).
+- MG ZS Lux main photo: confirmed as the client's own (kept; it is low resolution, 600×375).
 
 ## Still open
 
-1. **MG ZS main photo** (`public/fleet/mg-zs-lux-2025/01.webp`): 600×375, and its filename suggests a
-   dealer/stock image. Replace with your own photo, or confirm you have the rights.
-2. Live-site fixes: wrong redirects (`/autos/bmw-x2-2025-white/` → Lamborghini,
+1. Live-site fixes: wrong redirects (`/autos/bmw-x2-2025-white/` → Lamborghini,
    `/autos/gmc-yukon-elevation-2025-black/` → Ferrari) and the 404 footer links.
-3. Opening days are not stated; the site shows "9 am – 6 pm" without days and the structured data
-   omits opening hours until days are confirmed.
 
 ## SEO and migration
 

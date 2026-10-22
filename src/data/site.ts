@@ -9,7 +9,7 @@ export const business = {
   whatsapp: { display: "+971 55 945 3676", e164: "971559453676" },
   landline: { display: "+971 4 421 4433", tel: "+97144214433" },
   roadside: { display: "800-4845", tel: "8004845" },
-  hours: "9 am – 6 pm",
+  hours: "Daily, 9 am – 6 pm",
   email: "formuladriverentacar@gmail.com",
   social: [
     { label: "Instagram", href: "https://www.instagram.com/formuladrivedubai/" },
@@ -48,7 +48,7 @@ export const locations: Location[] = [
     name: "Dubai Marina — Princess Tower",
     detail: "Formula Drive office",
     addressLines: ["Unit-06, Ground Floor, Princess Tower", "Dubai Marina, Dubai, UAE"],
-    hours: "9 am – 6 pm",
+    hours: "Daily, 9 am – 6 pm",
     phone: { display: "+971 4 421 4433", tel: "+97144214433", label: "Landline" },
     directions:
       "https://www.google.com/maps/dir/?api=1&destination=Formula+Drive+Rent+a+Car+Princess+Tower+Dubai+Marina",
@@ -65,7 +65,7 @@ export const locations: Location[] = [
     name: "JW Marriott Hotel Marina",
     detail: "Formula Drive rental counter",
     addressLines: ["JW Marriott Hotel Marina", "Dubai Marina, Dubai, UAE"],
-    hours: "9 am – 6 pm",
+    hours: "Daily, 9 am – 6 pm",
     phone: { display: "+971 55 791 6550", tel: "+971557916550", whatsapp: "971557916550", label: "Counter" },
     note: "Formula Drive operates its own rental counter at the hotel.",
     directions: "https://www.google.com/maps/dir/?api=1&destination=JW+Marriott+Hotel+Marina+Dubai",
@@ -196,7 +196,7 @@ export const faqs = [
   },
   {
     q: "What are your opening hours?",
-    a: "Our Dubai Marina office in Princess Tower and our counter at JW Marriott Hotel Marina are open 9 am to 6 pm. WhatsApp enquiries are answered around the clock, and roadside assistance is available 24/7 on 800-4845.",
+    a: "Our Dubai Marina office in Princess Tower and our counter at JW Marriott Hotel Marina are open every day, 9 am to 6 pm. WhatsApp enquiries are answered around the clock, and roadside assistance is available 24/7 on 800-4845.",
   },
   {
     q: "How old do I need to be?",

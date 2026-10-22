@@ -62,6 +62,14 @@ const jsonLd = {
         addressCountry: "AE",
       },
       geo: { "@type": "GeoCoordinates", latitude: 25.088821, longitude: 55.146889 },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "09:00",
+          closes: "18:00",
+        },
+      ],
       contactPoint: [
         { "@type": "ContactPoint", telephone: `+${business.whatsapp.e164}`, contactType: "reservations", availableLanguage: ["English"] },
       ],

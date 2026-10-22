@@ -94,7 +94,7 @@ The new site shows them as **"AED x / day, excl. 5% VAT"**.
 ### Images
 15. **The MG ZS main photo is low-resolution (600×375) and its filename
     (`white_mg-zs_2025_6344_main_058a…`) suggests a dealer or stock image.** It is the only exterior shot
-    of the MG. → Used, but flagged. *Please confirm the rights or supply your own photo.*
+    of the MG. → Used. Resolved: the client confirmed the photo is theirs.
 16. Two background-removed cut-outs on a green ground (Audi Q2 460×266, Boxster 618×404).
     → Not used.
 17. Duplicates: featured images are crops or re-saves of gallery images (JPG + WebP pairs), and one

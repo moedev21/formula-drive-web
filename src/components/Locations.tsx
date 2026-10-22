@@ -37,7 +37,7 @@ export function Locations() {
                 ))}
               </address>
               <p className="mt-3">
-                <span className="font-semibold">Open</span> {loc.hours}
+                <span className="font-semibold">Open</span> {loc.hours.toLowerCase()}
               </p>
               {loc.note && <p className="mt-3 max-w-[48ch] text-muted">{loc.note}</p>}
               <ul className="mt-5 flex flex-col gap-1">
