@@ -11,6 +11,7 @@ export type Car = {
   liveTitle: string;
   brand: string;
   model: string;
+  tagline: string;
   categories: CategoryId[];
   pricePerDayAED: number | null;
   priceStatus: "verified" | "conflict";

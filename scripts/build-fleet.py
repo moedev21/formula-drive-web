@@ -28,49 +28,49 @@ SRC = os.path.join(ROOT, "data", "source")
 # preferred, exact/near duplicates and low-res cut-outs dropped.
 CURATION = {
     "ferrari-f8-spider": dict(
-        name="Ferrari F8 Spider", brand="Ferrari", model="F8 Spider",
+        name="Ferrari F8 Spider", brand="Ferrari", model="F8 Spider", tagline="Ultimate Open-Top Supercar",
         categories=["supercars", "convertibles"], images=[0, 3, 6, 2, 4, 5, 7]),
     "lamborghini-evo-spider": dict(
-        name="Lamborghini Huracán EVO Spyder", brand="Lamborghini", model="Huracán EVO Spyder",
+        name="Lamborghini EVO Spider", brand="Lamborghini", model="EVO Spider", tagline="Open-Top Supercar Performance",
         categories=["supercars", "convertibles"], images=[7, 0, 2, 5, 6]),
     "rent-lamborghini-urus": dict(
-        name="Lamborghini Urus", brand="Lamborghini", model="Urus",
+        name="Lamborghini Urus", brand="Lamborghini", model="Urus", tagline="Features a 4.0-liter Twin-Turbo V8 Engine",
         categories=["supercars", "suvs"], images=[0, 2, 1, 3, 4, 5, 6, 9]),
     "porsche-911-gts-spider": dict(
-        name="Porsche 911 GTS Cabriolet", brand="Porsche", model="911 GTS Cabriolet",
+        name="Porsche 911 GTS Spider", brand="Porsche", model="911 GTS Spider", tagline="Iconic Open-Top Performance",
         categories=["sports", "convertibles"], images=[3, 2, 10, 9, 4, 5, 6, 7]),
     "mercedes-benz-g63": dict(
-        name="Mercedes-Benz G63 AMG", brand="Mercedes-Benz", model="G63 AMG",
+        name="Mercedes-Benz G63", brand="Mercedes-Benz", model="G63", tagline="Sport Luxury SUV",
         categories=["suvs"], images=[0, 2, 4, 5, 7, 3, 8]),
     "porsche-cayenne-coupe": dict(
-        name="Porsche Cayenne Coupe", brand="Porsche", model="Cayenne Coupe",
+        name="Porsche Cayenne Coupe", brand="Porsche", model="Cayenne Coupe", tagline="Sporty Luxury SUV Redefined",
         categories=["suvs", "sports"], images=[2, 5, 4, 3, 6, 7, 8, 9]),
     "jeep-wrangler-rubicon-392-hemi-v8-6-4l": dict(
-        name="Jeep Wrangler Rubicon 392", brand="Jeep", model="Wrangler Rubicon 392 HEMI V8 6.4L",
+        name="Jeep Wrangler Rubicon 392", brand="Jeep", model="Wrangler Rubicon 392", tagline="Extreme V8 Beast",
         categories=["suvs"], images=[2, 0, 3, 5, 4]),
     "porsche-718-boxster-convertible": dict(
-        name="Porsche 718 Boxster", brand="Porsche", model="718 Boxster Convertible",
+        name="Porsche 718 Boxster Convertible", brand="Porsche", model="718 Boxster Convertible", tagline="Pure Open-Top Driving Precision",
         categories=["sports", "convertibles"], images=[0, 3, 5, 7, 6, 4, 8, 9]),
     "ford-mustang-gt-v8-5-0l": dict(
-        name="Ford Mustang GT V8", brand="Ford", model="Mustang GT V8 5.0L",
+        name="Ford Mustang GT V8", brand="Ford", model="Mustang GT V8", tagline="Ford Mustang GT Coupe V8",
         categories=["sports"], images=[0, 2, 4, 1, 5, 7, 6, 8, 10]),
     "bmw-4-series-convertible": dict(
-        name="BMW 4 Series Convertible", brand="BMW", model="4 Series Convertible",
+        name="BMW 4 Series Convertible", brand="BMW", model="4 Series Convertible", tagline="Premium Open Top",
         categories=["convertibles"], images=[11, 0, 2, 5, 3, 7, 8, 9, 6]),
     "mercedes-c-class": dict(
-        name="Mercedes-Benz C 200", brand="Mercedes-Benz", model="C-Class C 200",
+        name="Mercedes C Class", brand="Mercedes-Benz", model="C Class", tagline="Luxury Meets Intelligent Performance",
         categories=[], images=[0, 2, 6, 5, 8, 9, 10]),
     "gmc-yukon-elevation": dict(
-        name="GMC Yukon Elevation", brand="GMC", model="Yukon Elevation",
+        name="GMC Yukon Elevation", brand="GMC", model="Yukon Elevation", tagline="Full-Size Power & Premium Presence",
         categories=["suvs"], images=[0, 3, 2, 1, 4, 7, 8, 6, 5]),
     "bmw-x2": dict(
-        name="BMW X2", brand="BMW", model="X2",
+        name="BMW X2", brand="BMW", model="X2", tagline="Sporty Compact Luxury SUV",
         categories=["suvs"], images=[0, 6, 8, 9, 7, 11, 12, 2, 3]),
     "audi-q2": dict(
-        name="Audi Q2", brand="Audi", model="Q2",
+        name="Audi Q2", brand="Audi", model="Q2", tagline="Premium Compact SUV",
         categories=["suvs", "economy"], images=[0, 4, 5, 9, 6, 7, 8]),
     "mg-zs-lux-2025": dict(
-        name="MG ZS Lux", brand="MG", model="ZS Lux",
+        name="MG ZS Lux 2025", brand="MG", model="ZS Lux", tagline="Economy Compact SUV",
         categories=["suvs", "economy"], images=[0, 1, 3, 2, 4, 5]),
 }
 
@@ -113,6 +113,9 @@ def main():
         home_price = int(m.group(1).replace(",", "")) if m else None
         api_price = int(float(a["_auto_price"])) if a["_auto_price"] else None
         detail_price = int(det["price_display"].split(".")[0].replace(",", "")) if det.get("price_display") else None
+        # Price: the live homepage listing is the source (client instruction, 22 Oct 2026). Names and
+        # taglines come from the client's list in CURATION.
+        price = home_price
         price_status = "verified" if home_price and home_price == api_price == detail_price else "conflict"
 
         # Specs exactly as listed on the live detail page (approximate values kept as "~").
@@ -159,7 +162,8 @@ def main():
             "brand": cur["brand"],
             "model": cur["model"],
             "categories": cur["categories"],
-            "pricePerDayAED": home_price,
+            "tagline": cur["tagline"],
+            "pricePerDayAED": price,
             "priceStatus": price_status,
             "vatLabel": "excl. 5% VAT",
             "specs": specs,
@@ -176,7 +180,7 @@ def main():
             "brand": car["brand"], "model": car["model"],
             "categories": "|".join(car["categories"]),
             "live_body_terms": "|".join(c[10:] for c in a["class_list"] if c.startswith("auto-body-")),
-            "price_home_aed": home_price, "price_api": api_price, "price_detail": detail_price,
+            "price_shown_aed": price, "price_home_aed": home_price, "price_api": api_price, "price_detail": detail_price,
             "price_status": price_status, "specs_count": len(specs),
             "images_used": len(images), "images_found": len(imgs_all),
             "live_url": a["link"], "live_modified": a["modified"],
@@ -195,7 +199,7 @@ def main():
         w.writeheader()
         w.writerows(rows)
     for r in rows:
-        print(f'{r["name"]:<30} AED {r["price_home_aed"]!s:>5}  {r["price_status"]:<9} {r["categories"]:<24} imgs {r["images_used"]}/{r["images_found"]}  specs {r["specs_count"]}')
+        print(f'{r["name"]:<30} AED {r["price_shown_aed"]!s:>5} (live {r["price_home_aed"]!s:>5})  {r["price_status"]:<9} {r["categories"]:<24} imgs {r["images_used"]}/{r["images_found"]}  specs {r["specs_count"]}')
 
 
 if __name__ == "__main__":

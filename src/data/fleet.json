@@ -20,6 +20,7 @@
         "supercars",
         "convertibles"
       ],
+      "tagline": "Ultimate Open-Top Supercar",
       "pricePerDayAED": 3000,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -122,14 +123,15 @@
     {
       "id": 23623,
       "slug": "lamborghini-evo-spider",
-      "name": "Lamborghini Huracán EVO Spyder",
+      "name": "Lamborghini EVO Spider",
       "liveTitle": "Lamborghini EVO SPIDER",
       "brand": "Lamborghini",
-      "model": "Huracán EVO Spyder",
+      "model": "EVO Spider",
       "categories": [
         "supercars",
         "convertibles"
       ],
+      "tagline": "Open-Top Supercar Performance",
       "pricePerDayAED": 3000,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -208,6 +210,7 @@
         "supercars",
         "suvs"
       ],
+      "tagline": "Features a 4.0-liter Twin-Turbo V8 Engine",
       "pricePerDayAED": 2500,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -271,14 +274,15 @@
     {
       "id": 23836,
       "slug": "porsche-911-gts-spider",
-      "name": "Porsche 911 GTS Cabriolet",
+      "name": "Porsche 911 GTS Spider",
       "liveTitle": "Porsche 911 GTS Spider",
       "brand": "Porsche",
-      "model": "911 GTS Cabriolet",
+      "model": "911 GTS Spider",
       "categories": [
         "sports",
         "convertibles"
       ],
+      "tagline": "Iconic Open-Top Performance",
       "pricePerDayAED": 1600,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -387,13 +391,14 @@
     {
       "id": 23762,
       "slug": "mercedes-benz-g63",
-      "name": "Mercedes-Benz G63 AMG",
+      "name": "Mercedes-Benz G63",
       "liveTitle": "Mercedes Benz G63",
       "brand": "Mercedes-Benz",
-      "model": "G63 AMG",
+      "model": "G63",
       "categories": [
         "suvs"
       ],
+      "tagline": "Sport Luxury SUV",
       "pricePerDayAED": 1000,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -504,6 +509,7 @@
         "suvs",
         "sports"
       ],
+      "tagline": "Sporty Luxury SUV Redefined",
       "pricePerDayAED": 900,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -619,10 +625,11 @@
       "name": "Jeep Wrangler Rubicon 392",
       "liveTitle": "Jeep Wrangler Rubicon 392 Hemi V8 6.4L",
       "brand": "Jeep",
-      "model": "Wrangler Rubicon 392 HEMI V8 6.4L",
+      "model": "Wrangler Rubicon 392",
       "categories": [
         "suvs"
       ],
+      "tagline": "Extreme V8 Beast",
       "pricePerDayAED": 800,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -709,7 +716,7 @@
     {
       "id": 23815,
       "slug": "porsche-718-boxster-convertible",
-      "name": "Porsche 718 Boxster",
+      "name": "Porsche 718 Boxster Convertible",
       "liveTitle": "Porsche 718 Boxster Convertible",
       "brand": "Porsche",
       "model": "718 Boxster Convertible",
@@ -717,6 +724,7 @@
         "sports",
         "convertibles"
       ],
+      "tagline": "Pure Open-Top Driving Precision",
       "pricePerDayAED": 700,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -820,6 +828,7 @@
       "categories": [
         "suvs"
       ],
+      "tagline": "Full-Size Power & Premium Presence",
       "pricePerDayAED": 600,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -945,6 +954,7 @@
       "categories": [
         "convertibles"
       ],
+      "tagline": "Premium Open Top",
       "pricePerDayAED": 600,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -1063,11 +1073,12 @@
     {
       "id": 23611,
       "slug": "mercedes-c-class",
-      "name": "Mercedes-Benz C 200",
+      "name": "Mercedes C Class",
       "liveTitle": "Mercedes C Class",
       "brand": "Mercedes-Benz",
-      "model": "C-Class C 200",
+      "model": "C Class",
       "categories": [],
+      "tagline": "Luxury Meets Intelligent Performance",
       "pricePerDayAED": 600,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -1181,10 +1192,11 @@
       "name": "Ford Mustang GT V8",
       "liveTitle": "Ford Mustang GT V8 5.0L",
       "brand": "Ford",
-      "model": "Mustang GT V8 5.0L",
+      "model": "Mustang GT V8",
       "categories": [
         "sports"
       ],
+      "tagline": "Ford Mustang GT Coupe V8",
       "pricePerDayAED": 600,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -1271,6 +1283,7 @@
       "categories": [
         "suvs"
       ],
+      "tagline": "Sporty Compact Luxury SUV",
       "pricePerDayAED": 400,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -1381,6 +1394,7 @@
         "suvs",
         "economy"
       ],
+      "tagline": "Premium Compact SUV",
       "pricePerDayAED": 300,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",
@@ -1479,7 +1493,7 @@
     {
       "id": 23803,
       "slug": "mg-zs-lux-2025",
-      "name": "MG ZS Lux",
+      "name": "MG ZS Lux 2025",
       "liveTitle": "MG ZS Lux 2025",
       "brand": "MG",
       "model": "ZS Lux",
@@ -1487,6 +1501,7 @@
         "suvs",
         "economy"
       ],
+      "tagline": "Economy Compact SUV",
       "pricePerDayAED": 170,
       "priceStatus": "verified",
       "vatLabel": "excl. 5% VAT",

@@ -182,6 +182,7 @@ export function QuickView({ car, onClose }: { car: Car | null; onClose: () => vo
                   "Price on request"
                 )}
               </p>
+              <p className="t-h3 font-normal text-muted">{c.tagline}</p>
               {c.summary && <p className="t-body max-w-[60ch]">{c.summary}</p>}
             </div>
 
