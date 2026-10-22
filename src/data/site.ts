@@ -81,7 +81,6 @@ export const locations: Location[] = [
     addressLines: ["JW Marriott Hotel Marina", "Dubai Marina, Dubai, UAE"],
     hours: "Daily, 9 am – 6 pm",
     phone: { display: "+971 55 791 6550", tel: "+971557916550", whatsapp: "971557916550", label: "Counter" },
-    note: "Formula Drive operates its own rental counter at the hotel.",
     directions: "https://www.google.com/maps/dir/?api=1&destination=JW+Marriott+Hotel+Marina+Dubai",
     image: {
       src: "/locations/dubai-marina-canal.jpg",

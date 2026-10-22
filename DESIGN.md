@@ -223,6 +223,7 @@ Tokens
 | Pinned run (signature) | `position: sticky` title; car photographs crossfade/translate under it per step; IntersectionObserver, no scroll hijack | Scroll |
 | Section reveals | Heading → text → picture, 20px rise + opacity + 4px blur, 70ms stagger, once; the How It Works verbs reveal the same way inside their panels (not pinned) | Once per section |
 | Card hover | Image scale 1.03, 500ms ease-out; underline 160ms | Frequent → subtle |
+| Why Formula Drive cards | Staggered rise-in; with a mouse the card tilts toward the pointer on a damped spring (max ~6°), its photo shifts the other way and a soft light follows the pointer. Touch: rise-in only. Reduced motion: none | Occasional |
 | Filter change | Leaving cards fade 120ms (no travel); entering cards opacity + 8px rise, 280ms, 30ms stagger; View Transitions API where supported | Frequent → fast |
 | Quick View | Enter 480ms: 24px slide + opacity; exit 200ms: 12px + opacity (subtler) | Occasional |
 | Header | Background/line transition 280ms; active-link underline slides 280ms | Frequent → fast |
