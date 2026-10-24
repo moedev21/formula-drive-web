@@ -38,6 +38,11 @@ export const cars = data.cars as Car[];
 export const generalConditions: string[] = data.generalConditions;
 export const fleetCapturedAt: string = data.capturedAt;
 
+// When the prices were last checked against the business, shown on the page ("22 October 2026").
+export const pricesChecked = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Dubai" }).format(
+  new Date(fleetCapturedAt),
+);
+
 // The car's own page on this site (old WordPress URLs kept, trailing slash included).
 export function carPath(car: Car) {
   return `/autos/${car.slug}/`;

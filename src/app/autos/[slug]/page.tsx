@@ -8,7 +8,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { Reveal } from "@/components/Reveal";
 import { Dirham, withDirham } from "@/components/Dirham";
 import { ArrowLeft, ArrowRight, PhoneIcon, WhatsAppIcon } from "@/components/icons";
-import { carBySlug, carPath, cars, categoryLabel, formatAED, formatAmount, generalConditions } from "@/data/fleet";
+import { carBySlug, carPath, cars, categoryLabel, formatAED, formatAmount, generalConditions, pricesChecked } from "@/data/fleet";
 import { business } from "@/data/site";
 import { carEnquiry } from "@/lib/whatsapp";
 import { carLd } from "@/lib/schema";
@@ -113,6 +113,7 @@ export default async function CarPage({ params }: Props) {
                 ) : (
                   "Price on request"
                 )}
+                <span className="t-small mt-1 block text-muted">Price last checked {pricesChecked}.</span>
               </p>
               <div className="grid gap-2 sm:grid-cols-2">
                 <a href={`tel:${business.landline.tel}`} className="btn btn-dark">

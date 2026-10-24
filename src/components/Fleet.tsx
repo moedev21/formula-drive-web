@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { carPath, cars, categories, formatAmount, type Car, type CategoryId } from "@/data/fleet";
+import { carPath, cars, categories, formatAmount, pricesChecked, type Car, type CategoryId } from "@/data/fleet";
 import { business } from "@/data/site";
 import { Dirham } from "./Dirham";
 import { carEnquiry } from "@/lib/whatsapp";
@@ -61,6 +61,9 @@ export function Fleet() {
           <p data-reveal style={{ ["--i" as string]: 1 }} className="t-body max-w-[46ch] lg:col-span-4 lg:col-start-9">
             Supercars, sports cars, SUVs and convertibles, all priced per day. Open any car for specifications and rental
             terms, then call us or send a WhatsApp to book.
+            <span className="t-small mt-3 block text-muted">
+              Prices per day, excluding 5% VAT. Last checked {pricesChecked}.
+            </span>
           </p>
         </div>
 
