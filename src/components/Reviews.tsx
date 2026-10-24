@@ -23,11 +23,11 @@ export function Reviews() {
               Renters, in their own words.
             </h2>
             <p data-reveal style={{ ["--i" as string]: 1 }} className="t-body mt-6">
-              From{" "}
+              From our{" "}
               <a href={business.googleReviews.href} target="_blank" rel="noopener" className="link">
                 {business.googleReviews.count} Google reviews
-              </a>{" "}
-              of Formula Drive Rent a Car, Dubai Marina.
+              </a>
+              .
             </p>
           </div>
           <div className="flex gap-2">

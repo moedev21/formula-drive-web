@@ -56,7 +56,7 @@ export function Fleet() {
         {/* Section 03 — vehicle discovery */}
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <h2 id="fleet-title" data-reveal className="t-h2 lg:col-span-7">
-            Luxury car rental in Dubai, from one Marina office.
+            Luxury car rental in Dubai Marina.
           </h2>
           <p data-reveal style={{ ["--i" as string]: 1 }} className="t-body max-w-[46ch] lg:col-span-4 lg:col-start-9">
             Supercars, sports cars, SUVs and convertibles, all priced per day. Open any car for specifications and rental

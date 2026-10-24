@@ -103,9 +103,9 @@ export const experience = {
   heading: "Book the owner, not an agent.",
   body: "Every car in the Formula Drive fleet is self-owned, so you deal directly with the people who keep the keys. No brokers, no third-party fees, and the price you are quoted is the price you pay.",
   points: [
-    { title: "Direct owner bookings", text: "Talk to the team that owns and prepares the car." },
-    { title: "0% commission", text: "No agents in the middle, so better prices." },
-    { title: "No third-party fees", text: "Rent a car in Dubai without a broker's markup." },
+    { title: "Direct from the owner", text: "Talk to the team that owns and prepares the car." },
+    { title: "Airport and hotel delivery", text: "Timed to your flight, or to your hotel or home." },
+    { title: "WhatsApp, 24/7", text: "Ask about any car, any hour, and get an answer." },
     { title: "Zero-deposit option", text: "Available on request, alongside standard deposits." },
   ],
   video: {
@@ -117,7 +117,7 @@ export const experience = {
 export const steps = [
   {
     verb: "Choose",
-    text: "Pick a car from the fleet and open Quick View for its price, specifications and terms.",
+    text: "Pick a car and tap it to see the price, specifications and terms.",
     image: { src: "/fleet/porsche-911-gts-spider/01.webp", width: 1933, height: 1200, alt: "Porsche 911 GTS Cabriolet in a covered car park" },
   },
   {
@@ -135,21 +135,21 @@ export const steps = [
 export const reasons = [
   {
     title: "Direct booking",
-    text: "Book with the owner over WhatsApp, phone or email. No commission, no agents.",
+    text: "WhatsApp, call or email the people who own the car. Your booking goes straight to them, with no agency in between.",
     image: { src: "/fleet/porsche-cayenne-coupe/02.webp", width: 1559, height: 1200, alt: "Porsche Cayenne Coupe from the rear" },
   },
   {
-    title: "Diverse fleet",
-    text: "Fifteen cars, from an MG ZS at AED 170 a day to Ferrari and Lamborghini.",
+    title: "15 cars",
+    text: "From an MG ZS at AED 170 a day to a Ferrari F8 Spider at AED 3,000.",
     image: { src: "/fleet/ferrari-f8-spider/01.jpg", width: 1261, height: 673, alt: "Ferrari F8 Spider in yellow" },
   },
   {
-    title: "Professional support",
-    text: "Operators available 24/7, plus 24/7 roadside assistance while you drive.",
+    title: "24/7 support",
+    text: "WhatsApp answered around the clock, and roadside assistance on 800-4845 if anything goes wrong.",
     image: { src: "/fleet/mercedes-c-class/01.jpg", width: 1653, height: 1200, alt: "Mercedes-Benz C 200 in white" },
   },
   {
-    title: "Convenient rental",
+    title: "Delivered to you",
     text: "Daily, weekly or monthly, with delivery to your hotel, home or the airport.",
     image: { src: "/fleet/porsche-718-boxster-convertible/01.jpg", width: 1200, height: 907, alt: "Porsche 718 Boxster in blue with the Dubai skyline" },
   },
