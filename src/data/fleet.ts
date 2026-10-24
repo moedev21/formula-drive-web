@@ -38,6 +38,11 @@ export const cars = data.cars as Car[];
 export const generalConditions: string[] = data.generalConditions;
 export const fleetCapturedAt: string = data.capturedAt;
 
+// The car's own page on this site (old WordPress URLs kept, trailing slash included).
+export function carPath(car: Car) {
+  return `/autos/${car.slug}/`;
+}
+
 export function carBySlug(slug: string) {
   return cars.find((c) => c.slug === slug);
 }

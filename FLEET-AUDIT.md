@@ -135,6 +135,6 @@ The new site shows them as **"AED x / day, excl. 5% VAT"**.
 
 ## SEO note
 
-Do not delete or redirect the 15 live `/autos/…` URLs until an SEO migration plan is approved.
-The new one-page site links each Quick View to the car's live URL (`liveUrl` in the dataset), so
-both can run side by side.
+The 15 cars keep their `/autos/<slug>/` URLs as pages on the new site; the other old URLs are
+redirected (see HANDOVER.md, "SEO and migration"). `liveUrl` in the dataset records where each car's
+data was taken from.

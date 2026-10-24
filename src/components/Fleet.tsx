@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { cars, categories, formatAmount, type Car, type CategoryId } from "@/data/fleet";
+import { carPath, cars, categories, formatAmount, type Car, type CategoryId } from "@/data/fleet";
+import { business } from "@/data/site";
 import { Dirham } from "./Dirham";
 import { carEnquiry } from "@/lib/whatsapp";
 import { QuickView } from "./QuickView";
-import { ArrowRight, WhatsAppIcon } from "./icons";
+import { ArrowRight, PhoneIcon, WhatsAppIcon } from "./icons";
 
 type Filter = CategoryId | "all";
 type Sort = "featured" | "price-asc" | "price-desc" | "name";
@@ -55,11 +56,11 @@ export function Fleet() {
         {/* Section 03 — vehicle discovery */}
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <h2 id="fleet-title" data-reveal className="t-h2 lg:col-span-7">
-            Fifteen cars. One Marina garage.
+            Luxury car rental in Dubai, from one Marina office.
           </h2>
           <p data-reveal style={{ ["--i" as string]: 1 }} className="t-body max-w-[46ch] lg:col-span-4 lg:col-start-9">
-            Every car is ours, photographed in Dubai and priced per day. Open any car for its specifications, terms and a
-            direct WhatsApp enquiry.
+            Supercars, sports cars, SUVs and convertibles, all priced per day. Open any car for specifications and rental
+            terms, then call us or send a WhatsApp to book.
           </p>
         </div>
 
@@ -117,9 +118,9 @@ export function Fleet() {
         <ul className="mt-8 grid grid-cols-1 gap-x-6 gap-y-14 md:grid-cols-2 lg:mt-10 lg:grid-cols-3 2xl:grid-cols-4">
           {visible.map((car) => (
             <li key={car.slug} style={{ viewTransitionName: `car-${car.id}` }} className="group relative">
-              {/* The whole card opens Quick View; without JavaScript it is a link to the car's live page. */}
+              {/* The whole card opens Quick View; without JavaScript it is a link to the car's own page. */}
               <a
-                href={car.liveUrl}
+                href={carPath(car)}
                 onClick={(e) => {
                   e.preventDefault();
                   triggerRef.current = e.currentTarget;
@@ -137,7 +138,7 @@ export function Fleet() {
                     className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.03]"
                   />
                 </div>
-                <div className="mt-5 flex flex-col gap-1 pr-16">
+                <div className="mt-5 flex flex-col gap-1">
                   <h3 className="t-h3 decoration-1 underline-offset-[6px] group-hover:underline">{car.name}</h3>
                   <p className="t-small text-muted">{car.tagline}</p>
                   <p className="num mt-2">
@@ -159,17 +160,23 @@ export function Fleet() {
                   </span>
                 </div>
               </a>
-              {/* Sits beside the card link (not inside it), level with the car's name. */}
-              <div className="pointer-events-none absolute inset-x-0 top-0">
-                <div className="aspect-[4/3]" />
+              {/* Siblings of the card link, not inside it. */}
+              <div className="mt-5 grid grid-cols-2 gap-2">
+                <a
+                  href={`tel:${business.landline.tel}`}
+                  aria-label={`Call now about the ${car.name}`}
+                  className="btn btn-dark px-3"
+                >
+                  <PhoneIcon /> Call now
+                </a>
                 <a
                   href={carEnquiry(car.name)}
                   target="_blank"
                   rel="noopener"
                   aria-label={`Enquire about the ${car.name} on WhatsApp`}
-                  className="pointer-events-auto absolute right-0 mt-5 grid size-12 place-items-center bg-red text-white transition-colors duration-[160ms] hover:bg-red-press"
+                  className="btn btn-red px-3"
                 >
-                  <WhatsAppIcon className="size-5" />
+                  <WhatsAppIcon /> WhatsApp
                 </a>
               </div>
             </li>

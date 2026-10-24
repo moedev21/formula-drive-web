@@ -171,8 +171,8 @@ const errors = [];
   });
 
   await check("every anchor link points to an existing section", async () => {
-    const missing = await page.$$eval('a[href^="#"]', (as) =>
-      as.map((a) => a.getAttribute("href")).filter((h) => h.length > 1 && !document.getElementById(h.slice(1))),
+    const missing = await page.$$eval('a[href^="#"], a[href^="/#"]', (as) =>
+      as.map((a) => a.getAttribute("href").replace(/^\//, "")).filter((h) => h.length > 1 && !document.getElementById(h.slice(1))),
     );
     assert.deepEqual([...new Set(missing)], []);
   });
@@ -212,7 +212,7 @@ const errors = [];
 
   await check("phone: menu link closes the menu and scrolls to the section", async () => {
     await page.getByRole("button", { name: "Open menu" }).click();
-    await page.locator('header dialog[aria-label="Menu"] a[href="#locations"]').click();
+    await page.locator('header dialog[aria-label="Menu"] a[href="/#locations"]').click();
     await page.waitForTimeout(1200);
     assert.equal(await page.locator('header dialog[aria-label="Menu"]').evaluate((d) => d.open), false);
     const top = await page.locator("#locations").evaluate((el) => el.getBoundingClientRect().top);
@@ -269,11 +269,54 @@ const errors = [];
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, javaScriptEnabled: false });
   const page = await ctx.newPage();
   await page.goto(url, { waitUntil: "networkidle" });
-  await check("without JavaScript: content visible, cards link to live car pages", async () => {
+  await check("without JavaScript: content visible, cards link to the car pages", async () => {
     const hidden = await page.$$eval("[data-reveal]", (els) => els.filter((e) => getComputedStyle(e).opacity !== "1").length);
     assert.equal(hidden, 0);
     const href = await page.locator("#fleet ul > li > a").first().getAttribute("href");
-    assert.match(href, /^https:\/\/formuladriverentacar\.com\/autos\//);
+    assert.match(href, /^\/autos\/[a-z0-9-]+\/$/);
+  });
+  await ctx.close();
+}
+
+// ---------- Fleet card actions, Quick View footer, car pages ----------
+{
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const page = await ctx.newPage();
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto(url, { waitUntil: "networkidle" });
+  await check("every fleet card has Call now and WhatsApp buttons", async () => {
+    const cards = page.locator("#fleet ul > li");
+    const n = await cards.count();
+    assert.ok(n >= 15);
+    for (let i = 0; i < n; i++) {
+      const card = cards.nth(i);
+      assert.match(await card.getByRole("link", { name: /^Call now about/ }).getAttribute("href"), /^tel:\+971/);
+      assert.match(await card.getByRole("link", { name: /on WhatsApp$/ }).getAttribute("href"), /^https:\/\/wa\.me\//);
+    }
+  });
+  await check("Quick View has no link to the old website", async () => {
+    await page.locator("#fleet ul > li > a").first().click();
+    await page.locator("dialog[open]").waitFor();
+    assert.equal(await page.locator("dialog[open]").getByText("View on the current website").count(), 0);
+    await page.keyboard.press("Escape");
+  });
+  const carUrl = new URL("/autos/ferrari-f8-spider/", url).href;
+  const res = await page.goto(carUrl, { waitUntil: "networkidle" });
+  await check("car page renders with its own title, canonical and structured data", async () => {
+    assert.equal(res.status(), 200);
+    assert.match(await page.locator("h1").innerText(), /Ferrari F8 Spider/);
+    assert.match(await page.title(), /^Rent Ferrari F8 Spider in Dubai \| Formula Drive Dubai$/);
+    assert.equal(
+      await page.locator('link[rel="canonical"]').getAttribute("href"),
+      "https://www.formuladriverentacar.com/autos/ferrari-f8-spider/",
+    );
+    const ld = JSON.parse(await page.locator('script[type="application/ld+json"]').first().textContent());
+    assert.ok(ld["@graph"].some((n) => n["@type"] === "Product" && n.offers?.price === 3000));
+    assert.equal(await page.getByRole("link", { name: "Call now" }).count(), 1);
+    assert.equal(await page.getByRole("link", { name: "WhatsApp", exact: true }).count(), 1);
+  });
+  await check("car page has no horizontal scroll on a phone", async () => {
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
   });
   await ctx.close();
 }

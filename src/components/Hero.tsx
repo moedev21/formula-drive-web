@@ -74,7 +74,7 @@ export function Hero() {
           pinned ? "h-[calc(100svh-var(--header-h))]" : "min-h-[calc(100svh-var(--header-h))]"
         }`}
       >
-        <h1 id="hero-title" className="t-display relative z-10 text-charcoal" aria-label="Drive the extraordinary.">
+        <h1 id="hero-title" className="t-display relative z-10 text-charcoal" aria-label="Drive the extraordinary. Luxury and supercar rental in Dubai.">
           <span className="block overflow-hidden pb-[0.04em] md:inline-block">
             <span className="hero-word" style={{ ["--i" as string]: 0 }}>Drive</span>{" "}
             <span className="hero-word" style={{ ["--i" as string]: 1 }}>the</span>
@@ -82,6 +82,7 @@ export function Hero() {
           <span className="block overflow-hidden pb-[0.04em] md:inline-block">
             <span className="hero-word" style={{ ["--i" as string]: 2 }}>extraordinary.</span>
           </span>
+          <span className="sr-only"> Luxury and supercar rental in Dubai.</span>
         </h1>
 
         <p className="hero-fade t-body mt-4 max-w-[40ch] lg:mt-6 lg:max-w-[52ch]" style={{ ["--i" as string]: 0 }}>

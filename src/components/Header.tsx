@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { Logo } from "./Logo";
 import { CloseIcon, MenuIcon, WhatsAppIcon, PhoneIcon } from "./icons";
 import { business, nav } from "@/data/site";
@@ -21,7 +22,7 @@ export function Header() {
 
   // Highlight the nav link of the section crossing the upper third of the viewport.
   useEffect(() => {
-    const ids = nav.map((n) => n.href.slice(1));
+    const ids = nav.map((n) => n.href.slice(2));
     const els = ids.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
     const io = new IntersectionObserver(
       (entries) => {
@@ -46,14 +47,14 @@ export function Header() {
         Skip to content
       </a>
       <div className="frame flex h-full items-center justify-between gap-6">
-        <a href="#top" aria-label="Formula Drive Rent a Car, back to top" className="inline-flex min-h-12 shrink-0 items-center">
+        <Link href="/#top" aria-label="Formula Drive Rent a Car, home" className="inline-flex min-h-12 shrink-0 items-center">
           <Logo className="w-[156px] lg:w-[220px]" />
-        </a>
+        </Link>
 
         <nav aria-label="Main" className="hidden lg:block">
           <ul className="flex items-center gap-9">
             {nav.map((item) => {
-              const isActive = active === item.href.slice(1);
+              const isActive = active === item.href.slice(2);
               return (
                 <li key={item.href}>
                   <a

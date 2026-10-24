@@ -10,10 +10,12 @@ import { Faq } from "@/components/Faq";
 import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { homeLd } from "@/lib/schema";
 
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLd) }} />
       <Header />
       <main id="main">
         <Hero />

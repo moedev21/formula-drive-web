@@ -266,13 +266,10 @@ export function QuickView({ car, onClose }: { car: Car | null; onClose: () => vo
               </button>
             </form>
 
-            <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
               <button type="button" onClick={close} className="btn btn-dark">
                 <ArrowLeft /> Back to the fleet
               </button>
-              <a href={c.liveUrl} className="link t-small">
-                View on the current website
-              </a>
             </div>
           </div>
         </div>

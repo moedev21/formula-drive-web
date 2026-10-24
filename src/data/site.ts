@@ -5,7 +5,7 @@
 export const business = {
   name: "Formula Drive Rent a Car",
   shortName: "Formula Drive",
-  url: "https://formuladriverentacar.com",
+  url: "https://www.formuladriverentacar.com",
   whatsapp: { display: "+971 55 945 3676", e164: "971559453676" },
   landline: { display: "+971 4 421 4433", tel: "+97144214433" },
   roadside: { display: "800-4845", tel: "8004845" },
@@ -23,11 +23,11 @@ export const business = {
 } as const;
 
 export const nav = [
-  { label: "Fleet", href: "#fleet" },
-  { label: "Experience", href: "#experience" },
-  { label: "About", href: "#why" },
-  { label: "Locations", href: "#locations" },
-  { label: "Contact", href: "#contact" },
+  { label: "Fleet", href: "/#fleet" },
+  { label: "Experience", href: "/#experience" },
+  { label: "About", href: "/#why" },
+  { label: "Locations", href: "/#locations" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export type Location = {
