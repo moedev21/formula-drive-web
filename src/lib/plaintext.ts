@@ -16,7 +16,9 @@ export function llmsTxt() {
     "",
     `- Phone: ${business.landline.display} · WhatsApp: ${business.whatsapp.display} · Email: ${business.email}`,
     `- Roadside assistance (24/7): ${business.roadside.display}`,
-    ...locations.map((l) => `- ${l.name} (${l.detail}): ${l.addressLines.join(", ")}. Open ${l.hours.toLowerCase()}. ${l.phone.display}`),
+    ...locations.map(
+      (l) => `- ${l.name} (${l.detail}): ${l.addressLines.join(", ")}. Open ${l.hours.toLowerCase()}. ${l.phone.display}. Google profile: ${l.google}`,
+    ),
     "- Delivery to hotels, homes and the airport across Dubai.",
     `- Prices last checked ${pricesChecked}.`,
     "",

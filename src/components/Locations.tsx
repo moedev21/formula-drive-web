@@ -70,9 +70,14 @@ export function Locations() {
                   </a>
                 </li>
               </ul>
-              <a href={loc.directions} target="_blank" rel="noopener" className="btn btn-dark mt-6 self-start">
-                Get directions <ArrowRight />
-              </a>
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <a href={loc.directions} target="_blank" rel="noopener" className="btn btn-dark">
+                  Get directions <ArrowRight />
+                </a>
+                <a href={loc.google} target="_blank" rel="noopener" className="inline-flex min-h-11 items-center link">
+                  Reviews on Google
+                </a>
+              </div>
             </li>
           ))}
         </ul>

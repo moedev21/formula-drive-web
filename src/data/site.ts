@@ -18,7 +18,8 @@ export const business = {
   ],
   googleReviews: {
     count: 47,
-    href: "https://www.google.com/maps/search/?api=1&query=Formula+Drive+Rent+a+Car+Dubai+Marina",
+    // The Dubai Marina (Princess Tower) Google Business Profile.
+    href: "https://www.google.com/search?kgmid=/g/11bbwqtfrz",
   },
 } as const;
 
@@ -38,6 +39,8 @@ export type Location = {
   hours: string;
   phone: { display: string; tel: string; whatsapp?: string; label: string };
   directions: string;
+  // Google Business Profile for this location (by Knowledge Graph ID, which does not change).
+  google: string;
   note?: string;
   image: {
     src: string;
@@ -58,6 +61,7 @@ export const locations: Location[] = [
     addressLines: ["Unit-06, Ground Floor, Princess Tower", "Dubai Marina, Dubai, UAE"],
     hours: "Daily, 9 am – 6 pm",
     phone: { display: "+971 4 421 4433", tel: "+97144214433", label: "Landline" },
+    google: "https://www.google.com/search?kgmid=/g/11bbwqtfrz",
     directions:
       "https://www.google.com/maps/dir/?api=1&destination=Formula+Drive+Rent+a+Car+Princess+Tower+Dubai+Marina",
     image: {
@@ -81,6 +85,7 @@ export const locations: Location[] = [
     addressLines: ["JW Marriott Hotel Marina", "Dubai Marina, Dubai, UAE"],
     hours: "Daily, 9 am – 6 pm",
     phone: { display: "+971 55 791 6550", tel: "+971557916550", whatsapp: "971557916550", label: "Counter" },
+    google: "https://www.google.com/search?kgmid=/g/11p1_7r2cy",
     directions: "https://www.google.com/maps/dir/?api=1&destination=JW+Marriott+Hotel+Marina+Dubai",
     image: {
       src: "/locations/dubai-marina-canal.jpg",

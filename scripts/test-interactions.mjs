@@ -180,6 +180,8 @@ const errors = [];
   await check("directions links open Google Maps", async () => {
     const hrefs = await page.$$eval("#locations a", (as) => as.map((a) => a.href).filter((h) => h.includes("google.com/maps")));
     assert.equal(hrefs.length, 2);
+    const profiles = await page.$$eval("#locations a", (as) => as.map((a) => a.href).filter((h) => h.includes("kgmid=")));
+    assert.deepEqual(new Set(profiles).size, 2);
   });
 
   await check("header nav marks the current section", async () => {

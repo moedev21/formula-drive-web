@@ -1,4 +1,4 @@
-import { business, faqs } from "@/data/site";
+import { business, faqs, locations } from "@/data/site";
 import { carPath, cars, formatAED, type Car } from "@/data/fleet";
 
 // Structured data (JSON-LD). Absolute URLs use the canonical www host.
@@ -33,7 +33,24 @@ export const businessLd = {
   contactPoint: [
     { "@type": "ContactPoint", telephone: `+${business.whatsapp.e164}`, contactType: "reservations", availableLanguage: ["English"] },
   ],
-  sameAs: business.social.map((s) => s.href),
+  sameAs: [locations[0].google, ...business.social.map((s) => s.href)],
+  // The rental counter inside JW Marriott Hotel Marina, run by Formula Drive.
+  department: locations.slice(1).map((loc) => ({
+    "@type": "AutoRental",
+    "@id": abs(`/#${loc.id}`),
+    name: `${business.name} | ${loc.name}`,
+    telephone: loc.phone.tel,
+    address: { "@type": "PostalAddress", streetAddress: loc.addressLines[0], addressLocality: "Dubai Marina, Dubai", addressCountry: "AE" },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+    sameAs: [loc.google],
+  })),
 };
 
 export function productLd(car: Car) {
