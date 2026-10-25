@@ -43,8 +43,8 @@ const errors = [];
   await check("filter tabs show the right cars and counts", async () => {
     await page.locator("#fleet").scrollIntoViewIfNeeded();
     const cards = page.locator("#fleet ul > li");
-    assert.equal(await cards.count(), 15);
-    const expected = { Supercars: 3, Sports: 4, SUVs: 8, Convertibles: 5, Economy: 2 };
+    assert.equal(await cards.count(), 16);
+    const expected = { Supercars: 4, Sports: 4, SUVs: 9, Convertibles: 5, Economy: 2 };
     for (const [label, n] of Object.entries(expected)) {
       await page.getByRole("button", { name: new RegExp(`^${label}`) }).click();
       await page.waitForTimeout(450);
@@ -55,7 +55,7 @@ const errors = [];
     assert.match(live, /Showing 2 economy/);
     await page.getByRole("button", { name: /^All cars/ }).click();
     await page.waitForTimeout(450);
-    assert.equal(await cards.count(), 15);
+    assert.equal(await cards.count(), 16);
   });
 
   await check("sorting by price works both ways", async () => {
@@ -289,7 +289,7 @@ const errors = [];
   await check("every fleet card has Call now and WhatsApp buttons", async () => {
     const cards = page.locator("#fleet ul > li");
     const n = await cards.count();
-    assert.ok(n >= 15);
+    assert.ok(n >= 16);
     for (let i = 0; i < n; i++) {
       const card = cards.nth(i);
       assert.match(await card.getByRole("link", { name: /^Call now about/ }).getAttribute("href"), /^tel:\+971/);

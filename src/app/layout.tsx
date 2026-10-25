@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
 import { business } from "@/data/site";
+import { cars } from "@/data/fleet";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -12,7 +13,7 @@ const archivo = Archivo({
 
 const title = "Luxury & Supercar Rental Dubai | Formula Drive Rent a Car";
 const description =
-  "Rent a Ferrari, Lamborghini, Porsche or G63 direct from the owner in Dubai Marina. 15 cars from AED 170 a day, delivery across Dubai. Book on WhatsApp.";
+  `Rent a Ferrari, Lamborghini, Porsche or G63 direct from the owner in Dubai Marina. ${cars.length} cars from AED 170 a day, delivery across Dubai. Book on WhatsApp.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(business.url),

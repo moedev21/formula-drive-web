@@ -13,4 +13,5 @@ id,slug,name,live_title,brand,model,categories,live_body_terms,price_shown_aed,p
 23610,bmw-x2,BMW X2,BMW X2,BMW,X2,suvs,luxury-cars|sedans|sports,400,400,400,400,verified,8,9,13,https://formuladriverentacar.com/autos/bmw-x2/,2026-10-21T20:19:45
 23611,mercedes-c-class,Mercedes C Class,Mercedes C Class,Mercedes-Benz,C Class,,luxury-cars,600,600,600,600,verified,13,7,11,https://formuladriverentacar.com/autos/mercedes-c-class/,2026-10-21T20:26:02
 23211,ford-mustang-gt-v8-5-0l,Ford Mustang GT V8,Ford Mustang GT V8 5.0L,Ford,Mustang GT V8,sports,sports|sports-car,600,600,600,600,verified,1,9,12,https://formuladriverentacar.com/autos/ford-mustang-gt-v8-5-0l/,2026-10-21T19:40:57
-23192,rent-lamborghini-urus,Lamborghini Urus,Lamborghini Urus,Lamborghini,Urus,supercars|suvs,luxury-cars|sports|sports-car,2500,2500,2500,2500,verified,0,8,10,https://formuladriverentacar.com/autos/rent-lamborghini-urus/,2026-10-21T19:42:00
+23192,rent-lamborghini-urus,Lamborghini Urus (Blue),Lamborghini Urus,Lamborghini,Urus,supercars|suvs,luxury-cars|sports|sports-car,2500,2500,2500,2500,verified,0,8,10,https://formuladriverentacar.com/autos/rent-lamborghini-urus/,2026-10-21T19:42:00
+900001,lamborghini-urus-green,Lamborghini Urus (Green),,Lamborghini,Urus,supercars|suvs,,2500,,,,client-supplied 2026-10-25,0,5,5,,2026-10-25

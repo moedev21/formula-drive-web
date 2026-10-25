@@ -2,7 +2,9 @@ import data from "./fleet.json";
 
 export type CategoryId = "supercars" | "sports" | "suvs" | "convertibles" | "economy";
 
-export type CarImage = { src: string; width: number; height: number; sourceUrl: string };
+// `alt` describes the shot when it differs from the default; `position` is a CSS object-position
+// for photos whose subject sits off-centre when cropped to 4:3.
+export type CarImage = { src: string; width: number; height: number; sourceUrl: string; alt?: string; position?: string };
 
 export type Car = {
   id: number;
@@ -46,6 +48,13 @@ export const pricesChecked = new Intl.DateTimeFormat("en-GB", { day: "numeric", 
 // The car's own page on this site (old WordPress URLs kept, trailing slash included).
 export function carPath(car: Car) {
   return `/autos/${car.slug}/`;
+}
+
+// Alt text for a car photo: the shot's own description when it has one.
+export function imageAlt(car: Car, i: number) {
+  const img = car.images[i];
+  if (img.alt) return `${car.name}, ${img.alt}`;
+  return i === 0 ? `${car.name}, exterior` : `${car.name}, photo ${i + 1} of ${car.images.length}`;
 }
 
 export function carBySlug(slug: string) {

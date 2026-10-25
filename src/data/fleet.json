@@ -202,7 +202,7 @@
     {
       "id": 23192,
       "slug": "rent-lamborghini-urus",
-      "name": "Lamborghini Urus",
+      "name": "Lamborghini Urus (Blue)",
       "liveTitle": "Lamborghini Urus",
       "brand": "Lamborghini",
       "model": "Urus",
@@ -270,6 +270,67 @@
       ],
       "liveUrl": "https://formuladriverentacar.com/autos/rent-lamborghini-urus/",
       "liveModified": "2026-10-21T19:42:00"
+    },
+    {
+      "id": 900001,
+      "slug": "lamborghini-urus-green",
+      "name": "Lamborghini Urus (Green)",
+      "liveTitle": "",
+      "brand": "Lamborghini",
+      "model": "Urus",
+      "categories": [
+        "supercars",
+        "suvs"
+      ],
+      "tagline": "Features a 4.0-liter Twin-Turbo V8 Engine",
+      "pricePerDayAED": 2500,
+      "priceStatus": "verified",
+      "vatLabel": "excl. 5% VAT",
+      "specs": [],
+      "specsSource": "Live detail page (manufacturer-style reference figures; approximate values kept as listed)",
+      "conditions": [],
+      "summary": "The Lamborghini Urus stands as a testament to the fusion of power, style, and versatility. As the world’s first Super Sport Utility Vehicle, it combines the raw performance of a Lamborghini with the practicality of an SUV, offering an unparalleled driving experience that is both exhilarating and luxurious.",
+      "images": [
+        {
+          "src": "/fleet/lamborghini-urus-green/01.jpg",
+          "width": 1326,
+          "height": 1600,
+          "sourceUrl": "client-supplied",
+          "alt": "front three-quarter view with the Burj Khalifa behind",
+          "position": "50% 85%"
+        },
+        {
+          "src": "/fleet/lamborghini-urus-green/02.jpg",
+          "width": 1244,
+          "height": 1600,
+          "sourceUrl": "client-supplied",
+          "alt": "front view with the Dubai skyline",
+          "position": "50% 85%"
+        },
+        {
+          "src": "/fleet/lamborghini-urus-green/03.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "client-supplied",
+          "alt": "steering wheel and digital instrument cluster"
+        },
+        {
+          "src": "/fleet/lamborghini-urus-green/04.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "client-supplied",
+          "alt": "white leather front seats and panoramic roof"
+        },
+        {
+          "src": "/fleet/lamborghini-urus-green/05.jpg",
+          "width": 1600,
+          "height": 1200,
+          "sourceUrl": "client-supplied",
+          "alt": "centre console touchscreens"
+        }
+      ],
+      "liveUrl": "",
+      "liveModified": "2026-10-25"
     },
     {
       "id": 23836,

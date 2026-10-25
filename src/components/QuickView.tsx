@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
-import { categoryLabel, formatAmount, generalConditions, type Car } from "@/data/fleet";
+import { categoryLabel, formatAmount, generalConditions, imageAlt, type Car } from "@/data/fleet";
 import { Dirham, withDirham } from "./Dirham";
 import { carEnquiry } from "@/lib/whatsapp";
 import { ArrowLeft, ArrowRight, CloseIcon, WhatsAppIcon } from "./icons";
@@ -129,7 +129,8 @@ export function QuickView({ car, onClose }: { car: Car | null; onClose: () => vo
                 <Image
                   key={img.src}
                   src={img.src}
-                  alt={`${c.name}, photo ${i + 1} of ${images.length}`}
+                  alt={imageAlt(c, i)}
+                  style={{ objectPosition: img.position }}
                   fill
                   sizes="(min-width: 768px) 680px, 100vw"
                   loading={i === 0 ? "eager" : "lazy"}
@@ -161,7 +162,7 @@ export function QuickView({ car, onClose }: { car: Car | null; onClose: () => vo
                     aria-current={i === index ? "true" : undefined}
                     className={`relative block h-14 w-20 overflow-hidden transition-opacity duration-[160ms] ${i === index ? "opacity-100 outline-2 outline-charcoal" : "opacity-60 hover:opacity-100"}`}
                   >
-                    <Image src={img.src} alt="" fill sizes="80px" className="object-cover" />
+                    <Image src={img.src} alt="" fill sizes="80px" className="object-cover" style={{ objectPosition: img.position }} />
                   </button>
                 </li>
               ))}

@@ -38,6 +38,14 @@ After editing it, run `python3 scripts/build-fleet.py`. To change a single price
 `src/data/fleet.json` directly (but the next script run will overwrite it, so make the same change in
 the script or the snapshot).
 
+**Adding a car that was never on the old site** (e.g. the green Lamborghini Urus, added 25 Oct 2026):
+put the client's photos in `data/source/added/<slug>/` (file order = gallery order, first = card),
+add an entry to `ADDED` in `scripts/build-fleet.py` (name, tagline, price, the car it shares specs
+and terms with, alt text per photo, and an optional `object-position` for photos whose subject is
+low in the frame), then run `python3 scripts/build-fleet.py`. The car gets its own page at
+`/autos/<slug>/`, and appears in the sitemap, `llms.txt` and `pricing.md`. Fleet counts on the site
+come from the data, but the test expectations in `scripts/test-interactions.mjs` need updating.
+
 To add a car: add its photos under `data/source/raw-images/<slug>/`, add its entry to the snapshot
 or directly to `fleet.json`, and add a `CURATION` row.
 

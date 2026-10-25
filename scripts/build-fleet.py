@@ -13,11 +13,14 @@ Outputs
 Run from the project root:  python3 scripts/build-fleet.py
 """
 import csv
+import datetime
 import html
 import json
 import os
 import re
 import shutil
+
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "source")
@@ -34,7 +37,7 @@ CURATION = {
         name="Lamborghini EVO Spider", brand="Lamborghini", model="EVO Spider", tagline="Open-Top Supercar Performance",
         categories=["supercars", "convertibles"], images=[7, 0, 2, 5, 6]),
     "rent-lamborghini-urus": dict(
-        name="Lamborghini Urus", brand="Lamborghini", model="Urus", tagline="Features a 4.0-liter Twin-Turbo V8 Engine",
+        name="Lamborghini Urus (Blue)", brand="Lamborghini", model="Urus", tagline="Features a 4.0-liter Twin-Turbo V8 Engine",
         categories=["supercars", "suvs"], images=[0, 2, 1, 3, 4, 5, 6, 9]),
     "porsche-911-gts-spider": dict(
         name="Porsche 911 GTS Spider", brand="Porsche", model="911 GTS Spider", tagline="Iconic Open-Top Performance",
@@ -72,6 +75,20 @@ CURATION = {
     "mg-zs-lux-2025": dict(
         name="MG ZS Lux 2025", brand="MG", model="ZS Lux", tagline="Economy Compact SUV",
         categories=["suvs", "economy"], images=[0, 1, 3, 2, 4, 5]),
+}
+
+# Cars added after the live-site snapshot, supplied directly by the client. Each copies the
+# specs, summary, terms and categories of `like` (same model, different colour) and uses the
+# client's photos in data/source/added/<slug>/, in file order (first = card image).
+# `positions` sets the CSS object-position for photos whose subject is off-centre in a 4:3 crop.
+ADDED = {
+    "lamborghini-urus-green": dict(
+        id=900001, like="rent-lamborghini-urus", added="2026-10-25",
+        name="Lamborghini Urus (Green)", tagline="Features a 4.0-liter Twin-Turbo V8 Engine", price=2500,
+        alts=["front three-quarter view with the Burj Khalifa behind", "front view with the Dubai skyline",
+              "steering wheel and digital instrument cluster", "white leather front seats and panoramic roof",
+              "centre console touchscreens"],
+        positions={0: "50% 85%", 1: "50% 85%"}),
 }
 
 # Spec lines that describe other variants of the model, not the car offered.
@@ -184,6 +201,32 @@ def main():
             "price_status": price_status, "specs_count": len(specs),
             "images_used": len(images), "images_found": len(imgs_all),
             "live_url": a["link"], "live_modified": a["modified"],
+        })
+
+    for slug, add in ADDED.items():
+        like = next(c for c in cars if c["slug"] == add["like"])
+        src_dir = os.path.join(SRC, "added", slug)
+        dest = os.path.join(out_img_root, slug)
+        os.makedirs(dest, exist_ok=True)
+        images = []
+        for n, name in enumerate(sorted(os.listdir(src_dir))):
+            shutil.copyfile(os.path.join(src_dir, name), os.path.join(dest, name))
+            w, h = Image.open(os.path.join(src_dir, name)).size
+            img = {"src": f"/fleet/{slug}/{name}", "width": w, "height": h, "sourceUrl": "client-supplied", "alt": add["alts"][n]}
+            if n in add["positions"]:
+                img["position"] = add["positions"][n]
+            images.append(img)
+        car = {**like,
+               "id": add["id"], "slug": slug, "name": add["name"], "liveTitle": "", "tagline": add["tagline"],
+               "pricePerDayAED": add["price"], "priceStatus": "verified", "images": images,
+               "liveUrl": "", "liveModified": add["added"]}
+        cars.append(car)
+        rows.append({
+            "id": car["id"], "slug": slug, "name": car["name"], "live_title": "",
+            "brand": car["brand"], "model": car["model"], "categories": "|".join(car["categories"]),
+            "live_body_terms": "", "price_shown_aed": add["price"], "price_home_aed": None, "price_api": None,
+            "price_detail": None, "price_status": f"client-supplied {add['added']}", "specs_count": len(car["specs"]),
+            "images_used": len(images), "images_found": len(images), "live_url": "", "live_modified": add["added"],
         })
 
     # Most expensive first: the order the fleet opens in ("Featured").

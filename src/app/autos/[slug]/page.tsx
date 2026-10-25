@@ -8,7 +8,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { Reveal } from "@/components/Reveal";
 import { Dirham, withDirham } from "@/components/Dirham";
 import { ArrowLeft, ArrowRight, PhoneIcon, WhatsAppIcon } from "@/components/icons";
-import { carBySlug, carPath, cars, categoryLabel, formatAED, formatAmount, generalConditions, pricesChecked } from "@/data/fleet";
+import { carBySlug, carPath, cars, categoryLabel, formatAED, formatAmount, generalConditions, imageAlt, pricesChecked } from "@/data/fleet";
 import { business } from "@/data/site";
 import { carEnquiry } from "@/lib/whatsapp";
 import { carLd } from "@/lib/schema";
@@ -86,7 +86,8 @@ export default async function CarPage({ params }: Props) {
               <div className="relative aspect-[4/3] overflow-hidden bg-grey">
                 <Image
                   src={lead.src}
-                  alt={`${car.name}, exterior`}
+                  alt={imageAlt(car, 0)}
+                  style={{ objectPosition: lead.position }}
                   fill
                   priority
                   sizes="(min-width: 1024px) 58vw, 100vw"
@@ -133,7 +134,8 @@ export default async function CarPage({ params }: Props) {
                 <li key={img.src} className="relative aspect-[4/3] overflow-hidden bg-grey">
                   <Image
                     src={img.src}
-                    alt={`${car.name}, photo ${i + 2} of ${car.images.length}`}
+                    alt={imageAlt(car, i + 1)}
+                    style={{ objectPosition: img.position }}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                     className="object-cover"
@@ -193,7 +195,8 @@ export default async function CarPage({ params }: Props) {
                       <div className="relative aspect-[4/3] overflow-hidden bg-grey">
                         <Image
                           src={r.images[0].src}
-                          alt={`${r.name}, exterior`}
+                          alt={imageAlt(r, 0)}
+                          style={{ objectPosition: r.images[0].position }}
                           fill
                           sizes="(min-width: 768px) 33vw, 100vw"
                           className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.03]"

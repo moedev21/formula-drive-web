@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { carPath, cars, categories, formatAmount, pricesChecked, type Car, type CategoryId } from "@/data/fleet";
+import { carPath, cars, imageAlt, categories, formatAmount, pricesChecked, type Car, type CategoryId } from "@/data/fleet";
 import { business } from "@/data/site";
 import { Dirham } from "./Dirham";
 import { carEnquiry } from "@/lib/whatsapp";
@@ -135,7 +135,8 @@ export function Fleet() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-grey">
                   <Image
                     src={car.images[0].src}
-                    alt={`${car.name}, exterior`}
+                    alt={imageAlt(car, 0)}
+                    style={{ objectPosition: car.images[0].position }}
                     fill
                     sizes="(min-width: 1920px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.03]"
