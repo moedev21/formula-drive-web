@@ -12,7 +12,7 @@ export const businessLd = {
   url: abs("/"),
   logo: abs("/brand/formula-drive-logo-red-black.svg"),
   image: abs("/fleet/lamborghini-evo-spider/01.webp"),
-  telephone: business.landline.tel,
+  telephone: business.phone.tel,
   email: business.email,
   priceRange: "AED 170–3,000 per day",
   address: {
@@ -26,8 +26,8 @@ export const businessLd = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "09:00",
-      closes: "18:00",
+      opens: "10:00",
+      closes: "22:00",
     },
   ],
   contactPoint: [
@@ -45,8 +45,8 @@ export const businessLd = {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "09:00",
-        closes: "18:00",
+        opens: "10:00",
+        closes: "22:00",
       },
     ],
     sameAs: [loc.google],

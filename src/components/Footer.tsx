@@ -35,11 +35,9 @@ export function Footer() {
               ))}
             </address>
             <p className="mt-2 text-white/85">Open {loc.hours.toLowerCase()}</p>
-            {loc.phone.label === "Counter" && (
-              <a href={`tel:${loc.phone.tel}`} className="inline-flex min-h-11 items-center link text-white/85">
-                {loc.phone.display}
-              </a>
-            )}
+            <a href={`tel:${loc.phone.tel}`} className="inline-flex min-h-11 items-center link text-white/85">
+              {loc.phone.display}
+            </a>
           </div>
         ))}
 
@@ -52,8 +50,8 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href={`tel:${business.landline.tel}`} className="inline-flex min-h-11 items-center link">
-                {business.landline.display}
+              <a href={`tel:${business.phone.tel}`} className="inline-flex min-h-11 items-center link">
+                Call {business.phone.display}
               </a>
             </li>
             <li>

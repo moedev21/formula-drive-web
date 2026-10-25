@@ -66,7 +66,9 @@ Screenshots: run `node scripts/qa.mjs` and open `.qa/`.
 - Prices: the live homepage prices, shown as "AED x / day excl. 5% VAT" (VAT treatment confirmed).
 - Car names and taglines: from the client's list (`CURATION` in `scripts/build-fleet.py`).
 - Specs and model years: no confirmed figures needed; Quick View shows the live site's reference specs.
-- Opening hours: daily, 9 am – 6 pm at both locations (also in the JSON-LD). JW Marriott Hotel Marina counter: +971 55 791 6550.
+- Opening hours: daily, 10 am – 10 pm at both locations (also in the JSON-LD). Phones, both on WhatsApp: Princess Tower office
+  and main number +971 55 945 3676; JW Marriott Hotel Marina counter +971 55 791 6550. The old landline
+  +971 4 421 4433 was removed on 25 Oct 2026 at the client's request.
 - Social: Instagram `formuladrivedubai`, X `formulaonedubai`. Roadside assistance 800-4845 (24/7).
 - Hero video: the client's own Ferrari F8 Spider clips (`data/source/video/`, transcoded to
   `public/video/` as 720×1280 and 1080×1920 H.264 MP4 + VP9 WebM, muted, with poster frames).
@@ -102,8 +104,8 @@ The new site now serves formuladriverentacar.com (apex redirects to `www`, the c
 ## Booking journey
 
 Every action leads to a real enquiry, never a simulated reservation or payment: WhatsApp to
-+971 55 945 3676 (with the car, dates, pick-up and name prefilled from Quick View), a call to
-+971 4 421 4433, or email.
++971 55 945 3676 (with the car, dates, pick-up and name prefilled from Quick View), a call to the
+same number (or +971 55 791 6550 for the JW Marriott counter), or email.
 
 ## Image and video credits
 

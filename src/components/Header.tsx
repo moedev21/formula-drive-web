@@ -129,8 +129,8 @@ export function Header() {
             <a href={generalEnquiry} target="_blank" rel="noopener" className="btn btn-red w-full">
               <WhatsAppIcon /> WhatsApp {business.whatsapp.display}
             </a>
-            <a href={`tel:${business.landline.tel}`} className="btn btn-light w-full">
-              <PhoneIcon /> Call {business.landline.display}
+            <a href={`tel:${business.phone.tel}`} className="btn btn-light w-full">
+              <PhoneIcon /> Call {business.phone.display}
             </a>
           </div>
         </div>

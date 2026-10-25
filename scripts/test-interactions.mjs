@@ -158,7 +158,7 @@ const errors = [];
   await check("JW Marriott counter shows its own phone and hours", async () => {
     const text = await page.locator("#locations").innerText();
     assert.match(text, /\+971 55 791 6550/);
-    assert.match(text, /9 am – 6 pm/);
+    assert.match(text, /10 am – 10 pm/);
     assert.equal(await page.locator('#locations a[href="tel:+971557916550"]').count(), 1);
   });
 

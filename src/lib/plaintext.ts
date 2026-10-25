@@ -14,10 +14,10 @@ export function llmsTxt() {
       Math.min(...cars.map((c) => c.pricePerDayAED ?? Infinity)),
     )} to ${formatAED(Math.max(...cars.map((c) => c.pricePerDayAED ?? 0)))} a day, booked directly by WhatsApp, phone or email.`,
     "",
-    `- Phone: ${business.landline.display} · WhatsApp: ${business.whatsapp.display} · Email: ${business.email}`,
+    `- Phone and WhatsApp: ${business.phone.display} · Email: ${business.email}`,
     `- Roadside assistance (24/7): ${business.roadside.display}`,
     ...locations.map(
-      (l) => `- ${l.name} (${l.detail}): ${l.addressLines.join(", ")}. Open ${l.hours.toLowerCase()}. ${l.phone.display}. Google profile: ${l.google}`,
+      (l) => `- ${l.name} (${l.detail}): ${l.addressLines.join(", ")}. Open ${l.hours.toLowerCase()}. ${l.phone.display}${l.phone.whatsapp ? " (calls and WhatsApp)" : ""}. Google profile: ${l.google}`,
     ),
     "- Delivery to hotels, homes and the airport across Dubai.",
     `- Prices last checked ${pricesChecked}.`,
@@ -62,7 +62,7 @@ export function pricingMd() {
       .flatMap((c) => [`## ${c.name}: extra terms`, "", ...c.conditions.map((t) => `- ${t}`), ""]),
     "## How to book",
     "",
-    `WhatsApp ${business.whatsapp.display}, call ${business.landline.display} or email ${business.email} with the car and dates. The total, deposit and documents are confirmed before you commit; nothing is charged online.`,
+    `Call or WhatsApp ${business.phone.display}, or email ${business.email} with the car and dates. The total, deposit and documents are confirmed before you commit; nothing is charged online.`,
     "",
   ].join("\n");
 }

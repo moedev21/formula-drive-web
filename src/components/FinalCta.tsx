@@ -29,8 +29,8 @@ export function FinalCta() {
             <a href={generalEnquiry} target="_blank" rel="noopener" className="btn btn-red">
               <WhatsAppIcon /> WhatsApp {business.whatsapp.display}
             </a>
-            <a href={`tel:${business.landline.tel}`} className="btn btn-light">
-              <PhoneIcon /> Call {business.landline.display}
+            <a href={`tel:${business.phone.tel}`} className="btn btn-light">
+              <PhoneIcon /> Call {business.phone.display}
             </a>
           </div>
           <a data-reveal style={{ ["--i" as string]: 3 }} href={`mailto:${business.email}`} className="link inline-flex min-h-11 items-center self-start">

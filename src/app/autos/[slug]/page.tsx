@@ -117,7 +117,7 @@ export default async function CarPage({ params }: Props) {
                 <span className="t-small mt-1 block text-muted">Price last checked {pricesChecked}.</span>
               </p>
               <div className="grid gap-2 sm:grid-cols-2">
-                <a href={`tel:${business.landline.tel}`} className="btn btn-dark">
+                <a href={`tel:${business.phone.tel}`} className="btn btn-dark">
                   <PhoneIcon /> Call now
                 </a>
                 <a href={carEnquiry(car.name)} target="_blank" rel="noopener" className="btn btn-red">

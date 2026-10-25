@@ -167,7 +167,7 @@ export function Fleet() {
               {/* Siblings of the card link, not inside it. */}
               <div className="mt-5 grid grid-cols-2 gap-2">
                 <a
-                  href={`tel:${business.landline.tel}`}
+                  href={`tel:${business.phone.tel}`}
                   aria-label={`Call now about the ${car.name}`}
                   className="btn btn-dark px-3"
                 >

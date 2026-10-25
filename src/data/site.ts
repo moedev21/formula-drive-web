@@ -9,9 +9,10 @@ export const business = {
   shortName: "Formula Drive",
   url: "https://www.formuladriverentacar.com",
   whatsapp: { display: "+971 55 945 3676", e164: "971559453676" },
-  landline: { display: "+971 4 421 4433", tel: "+97144214433" },
+  // Main number, for calls and WhatsApp (also the Princess Tower office).
+  phone: { display: "+971 55 945 3676", tel: "+971559453676" },
   roadside: { display: "800-4845", tel: "8004845" },
-  hours: "Daily, 9 am – 6 pm",
+  hours: "Daily, 10 am – 10 pm",
   email: "formuladriverentacar@gmail.com",
   social: [
     { label: "Instagram", href: "https://www.instagram.com/formuladrivedubai/" },
@@ -61,8 +62,8 @@ export const locations: Location[] = [
     name: "Dubai Marina — Princess Tower",
     detail: "Formula Drive office",
     addressLines: ["Unit-06, Ground Floor, Princess Tower", "Dubai Marina, Dubai, UAE"],
-    hours: "Daily, 9 am – 6 pm",
-    phone: { display: "+971 4 421 4433", tel: "+97144214433", label: "Landline" },
+    hours: "Daily, 10 am – 10 pm",
+    phone: { display: "+971 55 945 3676", tel: "+971559453676", whatsapp: "971559453676", label: "Office" },
     google: "https://www.google.com/search?kgmid=/g/11bbwqtfrz",
     directions:
       "https://www.google.com/maps/dir/?api=1&destination=Formula+Drive+Rent+a+Car+Princess+Tower+Dubai+Marina",
@@ -85,7 +86,7 @@ export const locations: Location[] = [
     name: "JW Marriott Hotel Marina",
     detail: "Formula Drive rental counter",
     addressLines: ["JW Marriott Hotel Marina", "Dubai Marina, Dubai, UAE"],
-    hours: "Daily, 9 am – 6 pm",
+    hours: "Daily, 10 am – 10 pm",
     phone: { display: "+971 55 791 6550", tel: "+971557916550", whatsapp: "971557916550", label: "Counter" },
     google: "https://www.google.com/search?kgmid=/g/11p1_7r2cy",
     directions: "https://www.google.com/maps/dir/?api=1&destination=JW+Marriott+Hotel+Marina+Dubai",
@@ -204,7 +205,7 @@ export const faqs = [
   },
   {
     q: "What are your opening hours?",
-    a: "Our Dubai Marina office in Princess Tower and our counter at JW Marriott Hotel Marina are open every day, 9 am to 6 pm. WhatsApp enquiries are answered around the clock, and roadside assistance is available 24/7 on 800-4845.",
+    a: "Our Dubai Marina office in Princess Tower and our counter at JW Marriott Hotel Marina are open every day, 10 am to 10 pm. WhatsApp enquiries are answered around the clock, and roadside assistance is available 24/7 on 800-4845.",
   },
   {
     q: "How old do I need to be?",

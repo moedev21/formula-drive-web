@@ -54,7 +54,10 @@ export function Locations() {
                   <a
                     href={
                       loc.phone.whatsapp
-                        ? whatsappUrl(`Hello Formula Drive, I'd like to rent a car from your ${loc.name} counter.`, loc.phone.whatsapp)
+                        ? whatsappUrl(
+                            `Hello Formula Drive, I'd like to rent a car from your ${loc.name} ${loc.phone.label === "Counter" ? "counter" : "office"}.`,
+                            loc.phone.whatsapp,
+                          )
                         : generalEnquiry
                     }
                     target="_blank"
