@@ -3,14 +3,33 @@
 import { useEffect, useRef } from "react";
 
 // A brand-red streak that follows the mouse and fades out ("swish").
-// The head eases towards the cursor every frame and the trail is drawn as a curve through the
-// midpoints of its samples, so it stays smooth even when mouse events arrive unevenly.
+// The head eases towards the cursor every frame; the samples are smoothed (Chaikin) and the
+// trail is filled as one tapered ribbon, so there are no visible joins between segments.
 // Mouse and trackpad only, off for reduced motion, never intercepts clicks, and the animation
 // loop runs only while the trail is visible.
 const LIFE = 700; // ms a sample stays on screen
-const WIDTH = 5; // px at the head
-const FOLLOW = 0.4; // share of the remaining distance the head covers per 60 fps frame
-const MAX_POINTS = 160;
+const WIDTH = 3; // px at the head
+const FOLLOW = 0.3; // share of the remaining distance the head covers per 60 fps frame
+const MIN_STEP = 1.5; // px between samples; smaller moves are skipped to avoid jitter
+const MAX_POINTS = 140;
+
+type P = { x: number; y: number; t: number };
+
+// One pass of Chaikin corner-cutting: rounds the polyline while keeping its ends.
+function chaikin(pts: P[]): P[] {
+  if (pts.length < 3) return pts;
+  const out: P[] = [pts[0]];
+  for (let i = 0; i < pts.length - 1; i++) {
+    const a = pts[i];
+    const b = pts[i + 1];
+    out.push(
+      { x: a.x * 0.75 + b.x * 0.25, y: a.y * 0.75 + b.y * 0.25, t: a.t * 0.75 + b.t * 0.25 },
+      { x: a.x * 0.25 + b.x * 0.75, y: a.y * 0.25 + b.y * 0.75, t: a.t * 0.25 + b.t * 0.75 },
+    );
+  }
+  out.push(pts[pts.length - 1]);
+  return out;
+}
 
 export function CursorTrail() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -26,7 +45,7 @@ export function CursorTrail() {
 
     // The logo red (#CC1919), read from the design token.
     const color = getComputedStyle(document.documentElement).getPropertyValue("--color-red").trim() || "#cc1919";
-    const points: { x: number; y: number; t: number }[] = [];
+    const points: P[] = [];
     const target = { x: 0, y: 0 };
     const head = { x: 0, y: 0 };
     let active = false; // the pointer is over the page
@@ -40,6 +59,38 @@ export function CursorTrail() {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
+    const drawRibbon = (now: number) => {
+      const pts = chaikin(chaikin(points));
+      if (pts.length < 2) return;
+      const left: [number, number][] = [];
+      const right: [number, number][] = [];
+      for (let i = 0; i < pts.length; i++) {
+        const prev = pts[Math.max(0, i - 1)];
+        const next = pts[Math.min(pts.length - 1, i + 1)];
+        let nx = -(next.y - prev.y);
+        let ny = next.x - prev.x;
+        const len = Math.hypot(nx, ny) || 1;
+        nx /= len;
+        ny /= len;
+        const life = Math.max(0, 1 - (now - pts[i].t) / LIFE); // 1 = newest
+        const half = (WIDTH / 2) * life * life * (3 - 2 * life); // smoothstep taper to a point
+        left.push([pts[i].x + nx * half, pts[i].y + ny * half]);
+        right.push([pts[i].x - nx * half, pts[i].y - ny * half]);
+      }
+      ctx.beginPath();
+      ctx.moveTo(left[0][0], left[0][1]);
+      for (let i = 1; i < left.length; i++) ctx.lineTo(left[i][0], left[i][1]);
+      for (let i = right.length - 1; i >= 0; i--) ctx.lineTo(right[i][0], right[i][1]);
+      ctx.closePath();
+      ctx.fill();
+      // Round off the head.
+      const h = pts[pts.length - 1];
+      const hl = Math.max(0, 1 - (now - h.t) / LIFE);
+      ctx.beginPath();
+      ctx.arc(h.x, h.y, (WIDTH / 2) * hl * hl * (3 - 2 * hl), 0, Math.PI * 2);
+      ctx.fill();
+    };
+
     const draw = (now: number) => {
       const dt = last ? Math.min(now - last, 64) : 16.7;
       last = now;
@@ -49,28 +100,15 @@ export function CursorTrail() {
       head.x += (target.x - head.x) * k;
       head.y += (target.y - head.y) * k;
       const moving = Math.hypot(target.x - head.x, target.y - head.y) > 0.3;
-      if (active && moving) points.push({ x: head.x, y: head.y, t: now });
+      const tail = points[points.length - 1];
+      if (active && moving && (!tail || Math.hypot(head.x - tail.x, head.y - tail.y) >= MIN_STEP)) {
+        points.push({ x: head.x, y: head.y, t: now });
+      }
       while (points.length && (now - points[0].t > LIFE || points.length > MAX_POINTS)) points.shift();
 
       ctx.clearRect(0, 0, innerWidth, innerHeight);
-      ctx.lineCap = "round";
-      ctx.lineJoin = "round";
-      ctx.strokeStyle = color;
-      // Quadratic curves through the midpoints: each piece starts where the last one ended.
-      for (let i = 1; i < points.length - 1; i++) {
-        const p0 = points[i - 1];
-        const p1 = points[i];
-        const p2 = points[i + 1];
-        const life = Math.max(0, 1 - (now - p1.t) / LIFE); // 1 = newest
-        const ease = life * life * (3 - 2 * life); // smoothstep, so the tail thins gently
-        ctx.globalAlpha = ease;
-        ctx.lineWidth = Math.max(0.6, WIDTH * ease);
-        ctx.beginPath();
-        ctx.moveTo((p0.x + p1.x) / 2, (p0.y + p1.y) / 2);
-        ctx.quadraticCurveTo(p1.x, p1.y, (p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
-        ctx.stroke();
-      }
-      ctx.globalAlpha = 1;
+      ctx.fillStyle = color;
+      drawRibbon(now);
 
       if (points.length > 1 || (active && moving)) {
         frame = requestAnimationFrame(draw);
