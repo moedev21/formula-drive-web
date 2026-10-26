@@ -172,7 +172,7 @@ const errors = [];
   await check("videos play on screen, pause off screen, and the pause button works", async () => {
     await page.evaluate(() => window.scrollTo(0, 0));
     await page.waitForTimeout(1500);
-    const hero = page.locator("#top video");
+    const hero = page.locator(`#top [aria-hidden="false"] > video`);
     assert.equal(await hero.evaluate((v) => v.paused), false, "hero video not playing");
     await page.locator("#top").getByRole("button", { name: "Pause video" }).click();
     assert.equal(await hero.evaluate((v) => v.paused), true, "pause did not pause");
@@ -311,7 +311,7 @@ const errors = [];
   await check("reduced motion: hero is not pinned and all content is visible", async () => {
     const h = await page.evaluate(() => document.getElementById("top").offsetHeight);
     assert.ok(h <= 900, `hero height ${h}`);
-    assert.equal(await page.locator("#top video").evaluate((v) => v.paused), true, "video autoplayed under reduced motion");
+    assert.equal(await page.locator(`#top [aria-hidden="false"] > video`).evaluate((v) => v.paused), true, "video autoplayed under reduced motion");
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await page.waitForTimeout(300);
     const hidden = await page.$$eval("[data-reveal]", (els) => els.filter((e) => getComputedStyle(e).opacity !== "1").length);

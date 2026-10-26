@@ -6,7 +6,7 @@ import { heroSeries, formatAmount } from "@/data/fleet";
 import { Dirham } from "./Dirham";
 import { generalEnquiry } from "@/lib/whatsapp";
 import { ArrowRight, WhatsAppIcon } from "./icons";
-import { LoopVideo } from "./LoopVideo";
+import { HeroClips } from "./HeroClips";
 
 // Each car after the first holds the stage for this much scroll (in svh).
 const STEP_SVH = 55;
@@ -114,16 +114,8 @@ export function Hero() {
             ))}
           </div>
 
-          {/* The current car's own portrait clip beside its photograph. Keyed by car, so it swaps to
-              the next clip as the banner moves on. */}
-          <LoopVideo
-            key={current.car.slug}
-            src={current.video}
-            size={1280}
-            sizes="(min-width: 1024px) 25vw, 40vw"
-            label={current.videoLabel}
-            className="hero-media flex-[2] lg:order-3 lg:col-span-3"
-          />
+          {/* Each car's own portrait clip beside its photograph, cross-fading with it. */}
+          <HeroClips step={step} className="hero-media flex-[2] lg:order-3 lg:col-span-3" />
           </div>
 
           <div className="flex flex-col gap-5 lg:order-1 lg:col-span-3 lg:gap-6">
