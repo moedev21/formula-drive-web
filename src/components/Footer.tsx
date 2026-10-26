@@ -6,7 +6,7 @@ import { business, locations, nav } from "@/data/site";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="on-dark bg-charcoal text-white">
+    <footer className={"on-dark border-t-[3px] border-red bg-charcoal text-white" /* taste-skill-ignore: brand-red rule separating the final CTA from the footer */}>
       <div className="frame grid gap-12 py-16 lg:grid-cols-12 lg:gap-6 lg:py-24">
         <div className="lg:col-span-3">
           <Logo tone="light" className="w-[220px] lg:w-[280px]" />
