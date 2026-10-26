@@ -59,7 +59,7 @@ export const locations: Location[] = [
   {
     id: "princess-tower",
     name: "Dubai Marina — Princess Tower",
-    detail: "Formula Drive office",
+    detail: "Formula Drive Office",
     addressLines: ["Unit-06, Ground Floor, Princess Tower", "Dubai Marina, Dubai, UAE"],
     hours: "Daily, 10 am – 10 pm",
     phone: { display: "+971 55 945 3676", tel: "+971559453676", whatsapp: "971559453676", label: "Office" },
@@ -83,7 +83,7 @@ export const locations: Location[] = [
   {
     id: "jw-marriott-marina",
     name: "JW Marriott Hotel Marina",
-    detail: "Formula Drive rental counter",
+    detail: "Formula Drive Rental Counter",
     addressLines: ["JW Marriott Hotel Marina", "Dubai Marina, Dubai, UAE"],
     hours: "Daily, 10 am – 10 pm",
     phone: { display: "+971 55 791 6550", tel: "+971557916550", whatsapp: "971557916550", label: "Counter" },

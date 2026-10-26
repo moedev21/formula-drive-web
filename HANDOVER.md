@@ -110,7 +110,10 @@ same number (or +971 55 791 6550 for the JW Marriott counter), or email.
 ## Image and video credits
 
 - Fleet photographs: formuladriverentacar.com (the client's own).
-- Ferrari F8 Spider videos: supplied by the client.
+- Ferrari F8 Spider, Lamborghini EVO Spider, BMW 4 Series, Porsche 718 and Green Urus photos and
+  videos: supplied by the client. The FAQ reel (Lamborghini EVO Spider and Ferrari F8, 20 s) is
+  `public/video/lamborghini-ferrari-reel-*`, encoded 720×1280 without sound from
+  `data/source/video/IMG_1896-lamborghini-ferrari.MOV`.
 - "Dubai Marina Skyline" by Norlando Pobre, CC BY 2.0, via Wikimedia Commons
   (https://commons.wikimedia.org/wiki/File:Dubai_Marina_Skyline.jpg).
 - "UAE Dubai Marina img1 asv2018-01" by A.Savin, Free Art License 1.3, via Wikimedia Commons

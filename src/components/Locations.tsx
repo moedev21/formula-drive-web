@@ -37,7 +37,7 @@ export function Locations() {
                 </figcaption>
               </figure>
               <h3 className="t-h3 mt-6">{loc.name}</h3>
-              <p className="t-small mt-1 text-muted">{loc.detail}</p>
+              <p className="t-small mt-1 font-semibold text-red">{loc.detail}</p>
               <address className="mt-4 not-italic">
                 {loc.addressLines.map((l) => (
                   <span key={l} className="block">

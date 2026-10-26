@@ -100,7 +100,7 @@ export function Reviews() {
   };
 
   // aria-disabled rather than disabled, so keyboard focus stays on the arrow at either end.
-  const arrow = "grid size-12 place-items-center bg-grey transition-[background-color,opacity] duration-[160ms] hover:bg-line aria-disabled:cursor-default aria-disabled:opacity-40 aria-disabled:hover:bg-grey";
+  const arrow = "grid size-12 place-items-center bg-red text-white transition-[background-color,opacity] duration-[160ms] hover:bg-red-press aria-disabled:cursor-default aria-disabled:opacity-35 aria-disabled:hover:bg-red";
 
   return (
     <section id="reviews" aria-labelledby="reviews-title" className="pt-32 lg:pt-48">
@@ -146,7 +146,7 @@ export function Reviews() {
               </blockquote>
               <figcaption className="mt-auto flex flex-col pt-8">
                 <span className="font-semibold">{r.author}</span>
-                <span className="t-small text-muted">
+                <span className="t-small text-red">
                   Rented a {r.car} · Posted on Google
                 </span>
               </figcaption>
