@@ -202,7 +202,7 @@ export default async function CarPage({ params }: Props) {
                           className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.03]"
                         />
                       </div>
-                      <h3 className="t-h3 mt-5 decoration-1 underline-offset-[6px] group-hover:underline">{r.name}</h3>
+                      <h3 className="t-h3 mt-5 decoration-red decoration-2 underline-offset-[6px] group-hover:underline">{r.name}</h3>
                       <p className="num mt-1">
                         {r.pricePerDayAED ? (
                           <>
@@ -216,7 +216,7 @@ export default async function CarPage({ params }: Props) {
                           "Price on request"
                         )}
                       </p>
-                      <span className="t-small mt-2 inline-flex items-center gap-2 font-semibold">
+                      <span className="t-small mt-2 inline-flex items-center gap-2 font-semibold transition-colors duration-[160ms] group-hover:text-red">
                         View car <ArrowRight className="size-4 transition-transform duration-[160ms] group-hover:translate-x-1" />
                       </span>
                     </a>
