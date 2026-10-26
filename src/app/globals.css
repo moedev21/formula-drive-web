@@ -177,6 +177,16 @@ body {
   }
 }
 
+/* Footer links: the underline turns brand red on hover. */
+footer .link {
+  transition:
+    text-decoration-thickness var(--dur-1) var(--ease-out),
+    text-decoration-color var(--dur-1) var(--ease-out);
+}
+footer .link:hover {
+  text-decoration-color: var(--color-red);
+}
+
 /* ---------- Reveal on scroll (content stays visible without JS) ---------- */
 .js [data-reveal] {
   opacity: 0;
