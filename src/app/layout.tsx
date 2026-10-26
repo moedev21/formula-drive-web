@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
+import { CursorTrail } from "@/components/CursorTrail";
 import { business } from "@/data/site";
 import { cars } from "@/data/fleet";
 
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         {children}
+        <CursorTrail />
       </body>
     </html>
   );

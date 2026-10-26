@@ -22,6 +22,9 @@ const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
   await page.goto(url, { waitUntil: "networkidle" });
+  // Smooth scrolling animates every programmatic scroll, so a click can land where a target was
+  // a moment earlier. The checks here are about behaviour, not scroll animation.
+  await page.addStyleTag({ content: "html { scroll-behavior: auto !important; }" });
 
   await check("one h1, and every section has a heading", async () => {
     assert.equal(await page.locator("h1").count(), 1);
