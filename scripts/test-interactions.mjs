@@ -37,7 +37,8 @@ const errors = [];
     await page.waitForTimeout(500);
     const later = await caption.innerText();
     assert.notEqual(first, later, "caption did not change");
-    await page.evaluate(() => window.scrollTo(0, 0));
+    // Instant: the page scrolls smoothly, and a still-running scroll would move later click targets.
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   });
 
   await check("filter tabs show the right cars and counts", async () => {
