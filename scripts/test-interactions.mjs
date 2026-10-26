@@ -166,6 +166,32 @@ const errors = [];
     assert.equal(await page.locator('#locations a[href="tel:+971557916550"]').count(), 1);
   });
 
+  await check("reviews: arrows page to each end and dim there; a mouse drag moves the track", async () => {
+    const track = page.locator("#reviews ul");
+    const prev = page.getByRole("button", { name: "Previous reviews" });
+    const next = page.getByRole("button", { name: "Next reviews" });
+    await track.scrollIntoViewIfNeeded();
+    await page.waitForTimeout(600);
+    assert.equal(await prev.getAttribute("aria-disabled"), "true");
+    for (let i = 0; i < 8 && (await next.getAttribute("aria-disabled")) !== "true"; i++) {
+      await next.click();
+      await page.waitForTimeout(700);
+    }
+    assert.equal(await next.getAttribute("aria-disabled"), "true", "never reached the end");
+    assert.ok(await track.evaluate((el) => el.scrollLeft >= el.scrollWidth - el.clientWidth - 2));
+    assert.equal(await track.evaluate((el) => [...el.children].every((li) => getComputedStyle(li).opacity === "1")), true);
+    await track.evaluate((el) => el.scrollTo({ left: 0, behavior: "instant" }));
+    await page.waitForTimeout(300);
+    const box = await track.boundingBox();
+    await page.mouse.move(box.x + box.width * 0.6, box.y + 80);
+    await page.mouse.down();
+    for (let i = 1; i <= 10; i++) await page.mouse.move(box.x + box.width * 0.6 - i * 40, box.y + 80);
+    await page.mouse.up();
+    await page.waitForTimeout(700);
+    assert.ok((await track.evaluate((el) => el.scrollLeft)) > 100, "drag did not move the track");
+    assert.equal(await prev.getAttribute("aria-disabled"), "false");
+  });
+
   await check("FAQ items open and close", async () => {
     const d = page.locator("#faq details").first();
     await d.locator("summary").click();
