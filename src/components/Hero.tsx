@@ -80,7 +80,9 @@ export function Hero() {
             <span className="hero-word" style={{ ["--i" as string]: 1 }}>the</span>
           </span>{" "}
           <span className="block overflow-hidden pb-[0.04em] md:inline-block">
-            <span className="hero-word" style={{ ["--i" as string]: 2 }}>extraordinary.</span>
+            <span className="hero-word" style={{ ["--i" as string]: 2 }}>
+              <span className="text-red">extraordinary</span>.
+            </span>
           </span>
           <span className="sr-only"> Luxury and supercar rental in Dubai.</span>
         </h1>

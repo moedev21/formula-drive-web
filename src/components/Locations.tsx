@@ -10,7 +10,7 @@ export function Locations() {
       <div className="frame">
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <h2 id="locations-title" data-reveal className="t-h2 lg:col-span-7">
-            Collect in Dubai Marina.
+            Collect in <span className="text-red">Dubai Marina</span>.
           </h2>
           <p data-reveal style={{ ["--i" as string]: 1 }} className="t-body max-w-[46ch] lg:col-span-4 lg:col-start-9">
             Pick up from our office in Princess Tower or the Formula Drive counter at JW Marriott Hotel Marina, or ask us to

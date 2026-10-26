@@ -9,7 +9,7 @@ export function Faq() {
     <section id="faq" aria-labelledby="faq-title" className="pt-32 lg:pt-48">
       <div className="frame grid gap-12 lg:grid-cols-12 lg:gap-6">
         <h2 id="faq-title" data-reveal className="t-h2 lg:col-span-12">
-          Before you drive.
+          Before you <span className="text-red">drive</span>.
         </h2>
         <div className="flex flex-col gap-2 lg:col-span-12">
           {faqs.map((f, i) => (

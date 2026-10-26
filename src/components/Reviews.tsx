@@ -20,7 +20,7 @@ export function Reviews() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <h2 id="reviews-title" data-reveal className="t-h2">
-              Renters, in their own words.
+              <span className="text-red">Renters</span>, in their own words.
             </h2>
             <p data-reveal style={{ ["--i" as string]: 1 }} className="t-body mt-6">
               From our{" "}

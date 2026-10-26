@@ -66,7 +66,7 @@ export function WhyUs() {
       <div className="frame">
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <h2 id="why-title" data-reveal className="t-h2 lg:col-span-7">
-            Why Formula Drive.
+            Why <span className="text-red-on-dark">Formula</span> Drive.
           </h2>
           <p data-reveal style={{ ["--i" as string]: 1 }} className="t-body max-w-[46ch] lg:col-span-4 lg:col-start-9">
             A Dubai Marina rental company that owns its fleet, answers its phone and puts the car where you need it.
