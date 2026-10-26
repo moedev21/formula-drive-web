@@ -17,7 +17,7 @@ export function FinalCta() {
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col justify-end gap-8 px-[var(--margin)] py-16 lg:px-16 lg:py-24 xl:px-24">
+        <div className="flex min-w-0 flex-col justify-end gap-8 px-[var(--margin)] py-16 lg:px-16 lg:py-24 xl:px-24">
           <h2 id="contact-title" data-reveal className="t-h2">
             Your car is waiting.
           </h2>
@@ -26,10 +26,10 @@ export function FinalCta() {
             availability, the deposit and the documents you need in the same chat.
           </p>
           <div data-reveal style={{ ["--i" as string]: 2 }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a href={generalEnquiry} target="_blank" rel="noopener" className="btn btn-red">
+            <a href={generalEnquiry} target="_blank" rel="noopener" className="btn btn-red max-sm:px-4">
               <WhatsAppIcon /> WhatsApp {business.whatsapp.display}
             </a>
-            <a href={`tel:${business.phone.tel}`} className="btn btn-light">
+            <a href={`tel:${business.phone.tel}`} className="btn btn-light max-sm:px-4">
               <PhoneIcon /> Call {business.phone.display}
             </a>
           </div>

@@ -2,7 +2,6 @@
 // (snapshot in data/source/). Items the client must confirm are marked `toConfirm` and
 // listed in FLEET-AUDIT.md.
 
-import { cars } from "./fleet";
 
 export const business = {
   name: "Formula Drive Rent a Car",
@@ -147,7 +146,7 @@ export const reasons = [
     image: { src: "/fleet/porsche-cayenne-coupe/02.webp", width: 1559, height: 1200, alt: "Porsche Cayenne Coupe from the rear" },
   },
   {
-    title: `${cars.length} cars`,
+    title: "Economy to exotic",
     text: "From an MG ZS at AED 170 a day to a Ferrari F8 Spider at AED 3,000.",
     image: { src: "/fleet/ferrari-f8-spider/01.jpg", width: 1261, height: 673, alt: "Ferrari F8 Spider in yellow" },
   },
