@@ -44,6 +44,30 @@ const errors = [];
     await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   });
 
+  // Filtering and sorting run inside a view transition, which can take longer than a fixed
+  // pause on a busy page; wait for the expected state instead (up to 3 s).
+  const filtered = (label, n) =>
+    page
+      .waitForFunction(
+        ([label, n]) =>
+          document.querySelectorAll("#fleet ul > li").length === n &&
+          [...document.querySelectorAll('#fleet [aria-pressed="true"]')].some((b) => b.textContent.startsWith(label)),
+        [label, n],
+        { timeout: 3000 },
+      )
+      .catch(() => {});
+  const pricesSorted = (dir) =>
+    page
+      .waitForFunction(
+        (dir) => {
+          const p = [...document.querySelectorAll("#fleet ul > li p.num")].map((e) => Number((e.innerText.match(/([\d,]+)\s*\/ day/) || [, "0"])[1].replace(/,/g, "")));
+          return p.every((v, i) => i === 0 || (dir === "asc" ? p[i - 1] <= v : p[i - 1] >= v));
+        },
+        dir,
+        { timeout: 3000 },
+      )
+      .catch(() => {});
+
   await check("filter tabs show the right cars and counts", async () => {
     await page.locator("#fleet").scrollIntoViewIfNeeded();
     const cards = page.locator("#fleet ul > li");
@@ -51,14 +75,14 @@ const errors = [];
     const expected = { Supercars: 4, Sports: 4, SUVs: 9, Convertibles: 5, Economy: 2 };
     for (const [label, n] of Object.entries(expected)) {
       await page.getByRole("button", { name: new RegExp(`^${label}`) }).click();
-      await page.waitForTimeout(450);
+      await filtered(label, n);
       assert.equal(await cards.count(), n, `${label} count`);
       assert.equal(await page.getByRole("button", { name: new RegExp(`^${label}`) }).getAttribute("aria-pressed"), "true");
     }
     const live = await page.locator("#fleet p[aria-live]").innerText();
     assert.match(live, /Showing 2 economy/);
     await page.getByRole("button", { name: /^All cars/ }).click();
-    await page.waitForTimeout(450);
+    await filtered("All cars", 16);
     assert.equal(await cards.count(), 16);
   });
 
@@ -66,12 +90,12 @@ const errors = [];
     const prices = async () =>
       (await page.locator("#fleet ul > li p.num").allInnerTexts()).map((t) => Number(t.match(/([\d,]+)\s*\/ day/)[1].replace(/,/g, "")));
     await page.locator("#fleet select").selectOption("price-asc");
-    await page.waitForTimeout(450);
+    await pricesSorted("asc");
     const asc = await prices();
     assert.deepEqual(asc, [...asc].sort((a, b) => a - b));
     assert.equal(asc[0], 170);
     await page.locator("#fleet select").selectOption("price-desc");
-    await page.waitForTimeout(450);
+    await pricesSorted("desc");
     const desc = await prices();
     assert.deepEqual(desc, [...desc].sort((a, b) => b - a));
     await page.locator("#fleet select").selectOption("featured");
