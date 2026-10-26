@@ -144,7 +144,7 @@ export function Fleet() {
                 </div>
                 <div className="mt-5 flex flex-col gap-1">
                   <h3 className="t-h3 decoration-red decoration-2 underline-offset-[6px] group-hover:underline">{car.name}</h3>
-                  <p className="t-small text-red">{car.tagline}</p>
+                  <p className="t-small text-muted">{car.tagline}</p>
                   <p className="num mt-2">
                     {car.pricePerDayAED ? (
                       <>
