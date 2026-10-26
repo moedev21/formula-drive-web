@@ -48,7 +48,7 @@ export function Header() {
       </a>
       <div className="frame flex h-full items-center justify-between gap-6">
         <Link href="/#top" aria-label="Formula Drive Rent a Car, home" className="inline-flex min-h-12 shrink-0 items-center">
-          <Logo className="w-[156px] lg:w-[220px]" />
+          <Logo className="w-[min(187px,calc(100vw-204px))] lg:w-[264px]" />
         </Link>
 
         <nav aria-label="Main" className="hidden lg:block">
